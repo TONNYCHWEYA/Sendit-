@@ -1,0 +1,47 @@
+class OrdersController < ApplicationController
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+
+    def index
+        order = Order.all
+        render :json order
+    end
+
+    def show
+        order = find_order
+        render :json order
+    end
+
+    def create
+        order = Order.create!(order_params)
+        render :json order, status: :created
+    end
+
+    def update
+        order = find_order
+        order.update(order_params)
+        render :json order, status: :ok
+    end
+
+    def destroy
+        order = find_order
+        order.destroy
+        head :no_content
+    end
+
+    private
+
+    def find_order
+        Order.find(params[:id])
+    end
+
+    def order_params
+        params.permit(:order_status)
+    end
+
+    def render_not_found_response
+        render :json { message: "Order not found" }, status: :not_found
+    end
+
+
+
+end
