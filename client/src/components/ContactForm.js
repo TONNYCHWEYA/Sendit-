@@ -1,4 +1,9 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Button} from 'react-bootstrap'
+import imagejpg from '.images/image1.jpg'
+
+
 const ContactForm = () => {
   const [formStatus, setFormStatus] = React.useState('Send')
   const onSubmit = (e) => {
@@ -14,7 +19,7 @@ const ContactForm = () => {
     console.log(conFom)
   }
   return (
-    <div className="contact form">
+    <div className="contact-form">
       <h2 className="mb-3">Get in touch</h2>
       <form onSubmit={onSubmit}>
 
@@ -46,9 +51,8 @@ const ContactForm = () => {
           <textarea className="form-control" id="message" required />
         </div>
 
-        <button className="btn btn-danger" type="submit">
-          {formStatus}
-        </button>
+        
+        <Button>Submit</Button>
       </form>
     </div>
   )
