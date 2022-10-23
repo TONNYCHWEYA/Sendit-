@@ -1,21 +1,33 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Button} from 'react-bootstrap'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
+const Home = () => {
 
-const ContactForm = () => {
-  const [formStatus, setFormStatus] = React.useState('Send')
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('Submitting...')
-    const { OrderDate, OrderID, From, To, CollectingDate, Status } = e.target.elements
-    let conFom = {
-      OrderDate: OrderDate.value,
-      OrderID: OrderID.value,
-      From: From.value,
-      To: To.value,
-      CollectingDate: CollectingDate.value,
-      Status: Status.value,
-    }
-    console.log(conFom)
-  }
+  return (
+    <div className='homepage'>
+    <Card style={{ width: '50rem' }}>
+      <Card.Img src="thrift.jpg" />
+      <Card.Body>
+        <Card.Title>Daysha's Donations</Card.Title>
+        <Card.Text>
+          Over the years, I have donated a lot of items
+          to for-profit thrift stores.
+          Rather than contributing to big corporations,
+          I have decided to give my items away for those in need.
+          with Daysha's donations,
+          I am able to list my gently
+          used items and while you pay for shipping.
+        </Card.Text>
+        <Link to='/donations'>
+        <Button variant="secondary">View Donations</Button>
+        </Link>
+      </Card.Body>
+    </Card>
+    </div>
+  );
+
+}
+
+export default Home
