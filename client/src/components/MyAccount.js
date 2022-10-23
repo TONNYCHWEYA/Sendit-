@@ -7,7 +7,7 @@ import {Card, Button} from 'react-bootstrap'
 const OrdersCard = () => {
 
   return (
-    <div className='my-orders'>
+    <div className='cards'>
     <Card style={{ width: '50rem' }}>
       <Card.Img src="" />
       <Card.Body>
@@ -19,7 +19,22 @@ const OrdersCard = () => {
         </Link>
       </Card.Body>
     </Card>
+
+    <Card style={{ width: '50rem' }}>
+      <Card.Img src="" />
+      <Card.Body>
+        <Card.Text>
+            Click here to view orders made.
+        </Card.Text>
+        <Link>
+        <Button variant="secondary">Address Book</Button>
+        </Link>
+      </Card.Body>
+    </Card>
+
     </div>
+
+    
   );
 
 }
