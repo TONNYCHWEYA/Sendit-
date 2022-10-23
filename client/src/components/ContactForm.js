@@ -23,6 +23,7 @@ const ContactForm = () => {
       <form onSubmit={onSubmit}>
 
         <div className="mb-3">
+
           <label className="form-label" htmlFor="first name">
             First name
           </label>
