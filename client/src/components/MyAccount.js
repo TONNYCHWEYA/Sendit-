@@ -1,27 +1,21 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom'
+import {Card, Button} from 'react-bootstrap'
 
-const Home = () => {
+
+const OrdersCard = () => {
 
   return (
-    <div className='homepage'>
+    <div className='my-orders'>
     <Card style={{ width: '50rem' }}>
-      <Card.Img src="thrift.jpg" />
+      <Card.Img src="" />
       <Card.Body>
-        <Card.Title>Daysha's Donations</Card.Title>
         <Card.Text>
-          Over the years, I have donated a lot of items
-          to for-profit thrift stores.
-          Rather than contributing to big corporations,
-          I have decided to give my items away for those in need.
-          with Daysha's donations,
-          I am able to list my gently
-          used items and while you pay for shipping.
+            Click here to view orders made.
         </Card.Text>
-        <Link to='/donations'>
-        <Button variant="secondary">View Donations</Button>
+        <Link>
+        <Button variant="secondary">My Orders</Button>
         </Link>
       </Card.Body>
     </Card>
@@ -30,4 +24,4 @@ const Home = () => {
 
 }
 
-export default Home
+export default OrdersCard
