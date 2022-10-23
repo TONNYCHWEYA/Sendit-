@@ -12,7 +12,7 @@ const OrdersCard = () => {
       <Card.Img src="" />
       <Card.Body>
         <Card.Text>
-            Click here to view orders made.
+            Click here to view Orders.
         </Card.Text>
         <Link>
         <Button variant="secondary">My Orders</Button>
@@ -24,7 +24,7 @@ const OrdersCard = () => {
       <Card.Img src="" />
       <Card.Body>
         <Card.Text>
-            Click here to view orders made.
+            Click here to view Address Book.
         </Card.Text>
         <Link>
         <Button variant="secondary">Address Book</Button>
@@ -32,9 +32,18 @@ const OrdersCard = () => {
       </Card.Body>
     </Card>
 
+    <Card style={{ width: '50rem' }}>
+      <Card.Img src="" />
+      <Card.Body>
+        <Card.Text>
+            Click here to view Profile Settings.
+        </Card.Text>
+        <Link>
+        <Button variant="secondary">Profile Settings</Button>
+        </Link>
+      </Card.Body>
+    </Card>
     </div>
-
-    
   );
 
 }
