@@ -19,7 +19,7 @@ const ContactForm = () => {
   }
   return (
     <div className="contact-form">
-      <h2 className="mb-3">Get in touch</h2>
+      <h2 className="mb-3">Contact Us</h2>
       <form onSubmit={onSubmit}>
 
         <div className="mb-3">
@@ -50,8 +50,9 @@ const ContactForm = () => {
           <textarea className="form-control" id="message" required />
         </div>
 
-        
-        <Button>Submit</Button>
+        <button className="btn btn-danger" type="submit">
+          {formStatus}
+        </button>
       </form>
     </div>
   )

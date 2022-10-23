@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <ContactForm />
       <AboutUs/>
-      <MyAccount/>
 
     </div>
   )

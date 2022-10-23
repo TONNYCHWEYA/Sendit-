@@ -5,8 +5,8 @@ import { Card } from 'react-bootstrap'
 
 const AboutUs = () => {
   return (
-    <div className='about-us'>
-      <Card className='mb-3'>
+    <div class="col d-flex justify-content-center">
+      <Card className='mb-3'  style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title style={{color : '#473352'}}>
             Our Mission
@@ -16,9 +16,8 @@ const AboutUs = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card.Img src=''></Card.Img>
 
-      <Card className='mb-3'>
+      <Card className='mb-3' style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title style={{color : '#000'}}>
             Our Vision
@@ -29,7 +28,7 @@ const AboutUs = () => {
         </Card.Body>
       </Card>
       
-      <Card className='mb-3'>
+      <Card className='mb-3' style={{ width: '50rem' }}>
         <Card.Body >
           <Card.Title style={{color : '#000'}}>
             Our Values
@@ -46,7 +45,7 @@ const AboutUs = () => {
         </Card.Body>
       </Card>
       
-      <Card className='mb-3'>
+      <Card className='mb-3' style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title style={{color : '#000'}}>
             Our Purpose
@@ -59,6 +58,7 @@ const AboutUs = () => {
         </Card.Body>
       </Card>
     </div>
+    
   )
 }
 
