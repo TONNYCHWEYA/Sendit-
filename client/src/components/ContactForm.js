@@ -21,9 +21,7 @@ const ContactForm = () => {
     <div className="contact-form">
       <h2 className="mb-3">Contact Us</h2>
       <form onSubmit={onSubmit}>
-
         <div className="mb-3">
-
           <label className="form-label" htmlFor="first name">
             First name
           </label>
