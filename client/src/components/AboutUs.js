@@ -57,9 +57,7 @@ const AboutUs = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-
     </div>
-    
   )
 }
 
