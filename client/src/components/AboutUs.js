@@ -3,8 +3,6 @@ import '../App.css'
 import { Card } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 
-
-
 const AboutUs = () => {
   return (
     <div class="col d-flex justify-content-center">
@@ -59,6 +57,7 @@ const AboutUs = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+
     </div>
     
   )
