@@ -8,7 +8,7 @@ const AccountCards = () => {
   return (
     <div className='account-cards'>
       <div className='"col d-flex justify-content-center"'>
-        <Card style={{ width: '50rem', outerHeight: '20rem' }}>
+        <Card style={{ width: '10rem', outerHeight: '10rem' }}>
           <Card.Img src=''/>
           <Card.Body>
             <Card.Text>
@@ -20,7 +20,7 @@ const AccountCards = () => {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '50rem', outerHeight: '20rem' }}>
+        <Card style={{ width: '10rem', outerHeight: '10rem' }}>
           <Card.Img/>
           <Card.Body>
             <Card.Text>
@@ -32,7 +32,7 @@ const AccountCards = () => {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '50rem', outerHeight: '20rem' }}>
+        <Card style={{ width: '10rem', outerHeight: '10rem' }}>
           <Card.Img/>
           <Card.Body>
             <Card.Text>
