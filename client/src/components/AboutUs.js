@@ -1,7 +1,6 @@
 import React from 'react'
 import '../App.css'
-import { Card } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
+import { Card, Carousel } from 'react-bootstrap'
 
 const AboutUs = () => {
   return (
@@ -66,6 +65,18 @@ const AboutUs = () => {
         </Card.Body>
       </Card>
     </div>
+      <div>
+        <Carousel>
+          <Carousel.Item>
+            <img
+            className="d-block w-10"
+            src="https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="First slide"
+
+            />
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </div>
   )
 }
