@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image'
 const AboutUs = () => {
   return (
     <div className='about-us'>
-      <Card className='card text-white bg-info mb-3'>
+      <Card>
         <Card.Body>
           <Card.Title>
             About Us
