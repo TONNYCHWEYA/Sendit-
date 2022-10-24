@@ -19,6 +19,7 @@ const ContactForm = () => {
   return (
     <div className="form-group">
       <h2 className="mb-3">Contact Us</h2>
+      
       <form onSubmit={onSubmit}>
           <div class="form-group">
             <div className="mb-3">

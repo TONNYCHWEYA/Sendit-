@@ -7,8 +7,9 @@ import UpdateProfile from './components/UpdateProfile';
 function App() {
   return (
     <div className="App">
-      
-      <UpdateProfile/>
+      <ContactForm/> 
+      <AboutUs/>
+      <MyAccount/>  
     </div>
   );
 }
