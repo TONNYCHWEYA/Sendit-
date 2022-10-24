@@ -1,42 +1,49 @@
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-function UncontrolledExample() {
+function ControlledCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <Carousel>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          src="https://cdn.pixabay.com/photo/2022/09/07/10/01/landscape-7438429_960_720.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Welcome to Sendit Courier Service</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome to SendIt</h3>
+          <p>With SendIt, you can be saving time and creating consistent contact for your audience...</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src="https://cdn.pixabay.com/photo/2014/04/17/23/26/environmental-protection-326923_1280.jpg"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Welcome to SendIt</h3>
+          <p>With SendIt, you can create content and publish across all channels instantly.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src="https://cdn.pixabay.com/photo/2022/07/20/18/44/reading-7334749_960_720.png"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Welcome to SendIt</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          With SendIt, you can create content and publish across all channels instantly.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,4 +51,15 @@ function UncontrolledExample() {
   );
 }
 
-export default UncontrolledExample;
+// render(<ControlledCarousel />);
+
+const Home = () => {
+    return (
+        <section className='Home'>
+            <div className='container'>
+                <ControlledCarousel/>
+            </div>
+        </section>
+    )
+}
+export default Home;
