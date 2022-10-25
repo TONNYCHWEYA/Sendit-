@@ -62,6 +62,7 @@ const EditableRow = ({
         <button type="button" onClick={handleCancelClick}>
           Cancel
         </button>
+        
       </td>
     </tr>
   );

@@ -119,8 +119,9 @@ const MyOrdersForm = () => {
   };
 
   return (
-    
+
     <div className="app-container">
+      <h2 className="mb-3">My Orders</h2>
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
