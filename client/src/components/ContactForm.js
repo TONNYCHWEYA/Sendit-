@@ -20,7 +20,7 @@ const ContactForm = () => {
     <div className="form-group">
       <h2 className="mb-3">Contact Us</h2>
       
-      <form onSubmit={onSubmit}>
+      <form className='ma' onSubmit={onSubmit}>
           <div class="form-group">
             <div className="mb-3">
               <label className="form-label" htmlFor="first name">

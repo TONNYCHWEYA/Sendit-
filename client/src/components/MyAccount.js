@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import { Card, Carousel, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
 const AccountCards = () => {
   return (
@@ -8,7 +8,7 @@ const AccountCards = () => {
       <Card>
         <Card.Body>
           <Card.Title>
-            My Account
+            <h3>My Account</h3>
           </Card.Title>
         </Card.Body>
       </Card>
@@ -62,11 +62,8 @@ const AccountCards = () => {
       </Card>
     </div>
       <div>
-        <Carousel>
-          <Carousel.Item>
-            
-          </Carousel.Item>
-        </Carousel>
+        
+        
       </div>
     </div>
   )
