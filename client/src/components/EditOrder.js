@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import toastr from 'cogo-toast';
+import toastr from 'cogo-toast';
 
 class Edit extends Component
 {
@@ -51,7 +51,7 @@ class Edit extends Component
 			this.reset();
 			this.props.updateState(data, 1);
 			document.getElementById("closeEditModal").click();
-			//toastr.warn('User data updated successfully!', {position : 'top-right', heading: 'Done'});
+			toastr.warn('User data updated successfully!', {position : 'top-right', heading: 'Done'});
 		}
 	}
     //--- Validate all input field ---//

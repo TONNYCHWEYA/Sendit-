@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import toastr from 'cogo-toast';
+import toastr from 'cogo-toast';
 import Create from './CreateOrder'
 import Edit from './EditOrder'
 
@@ -51,7 +51,7 @@ class Index extends Component
 				return i !== id;
 			})
 		}))
-		//toastr.error('User has been deleted successfully!', {position : 'top-right', heading: 'Done'});
+		toastr.error('User has been deleted successfully!', {position : 'top-right', heading: 'Done'});
 	}
 
     render() {

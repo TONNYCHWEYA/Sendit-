@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-//import toastr from 'cogo-toast';
+import toastr from 'cogo-toast';
 
 class Create extends Component
 {
@@ -40,7 +40,7 @@ class Create extends Component
 			this.reset();
 			this.props.updateState(data, 0);
 			document.getElementById("closeAddModal").click();
-			//toastr.success('New user added successfully!', {position : 'top-right', heading: 'Done'});
+			toastr.success('New user added successfully!', {position : 'top-right', heading: 'Done'});
 		}
 	}
 	//--- Validate all input field ---//
