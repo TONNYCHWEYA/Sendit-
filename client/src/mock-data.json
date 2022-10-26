@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "ordername": "Chairs",
+    "from": "Nairobi",
+    "to": "Machakos",
+    "price": "1000",
+    "status" : "delivered"
+  },
+  {
+    "id": 2,
+    "ordername": "table",
+    "from": "Webuye",
+    "to": "Kisumu",
+    "price": "1500",
+    "status" : "pending"
+  }
+]
+  

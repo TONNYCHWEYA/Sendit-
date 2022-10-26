@@ -1,54 +1,72 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
-import {Card, Button} from 'react-bootstrap'
+import '../App.css'
+import { Card, Button } from 'react-bootstrap'
 
-
-const OrdersCard = () => {
-
+const AccountCards = () => {
   return (
-    <div className='cards'>
-    <Card style={{ width: '50rem' }}>
-      <Card.Img src="" />
-      <Card.Body>
-        <Card.Text>
-            Click here to view Orders.
-        </Card.Text>
-        <Link>
-        <Button variant="secondary">My Orders</Button>
-        </Link>
-      </Card.Body>
-    </Card>
+    <div className='about-us'>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h3>My Account</h3>
+          </Card.Title>
+        </Card.Body>
+      </Card>
+    <div class="col d-flex justify-content-center">
+      <Card className='mb-3' style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title style={{color : '#473352'}}>
+            <h4>My orders</h4>
+          </Card.Title>
+          <Card.Text>
+          <p>Click here to see the orders you have made </p>
+          </Card.Text>
+          <Button variant= "secondary">Orders</Button>
+        </Card.Body>
+      </Card>
 
-    <Card style={{ width: '50rem' }}>
-      <Card.Img src="" />
-      <Card.Body>
-        <Card.Text>
-            Click here to view Address Book.
-        </Card.Text>
-        <Link>
-        <Button variant="secondary">Address Book</Button>
-        </Link>
-      </Card.Body>
-    </Card>
-
-    <Card style={{ width: '50rem' }}>
-      <Card.Img src="" />
-      <Card.Body>
-        <Card.Text>
-            Click here to view Profile Settings.
-        </Card.Text>
-        <Link>
-        <Button variant="secondary">Profile Settings</Button>
-        </Link>
-      </Card.Body>
-    </Card>
-
-    
-    
+      <Card className='mb-3' style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title style={{color : '#473352'}}>
+            <h4>Adress Book</h4>
+          </Card.Title>
+          <Card.Text>
+          <p>Click here to view the address book </p>
+          </Card.Text>
+          <Button variant= "secondary">Adress Book</Button>
+        </Card.Body>
+      </Card>
+      
+      <Card className='mb-3' style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title style={{color : '#473352'}}>
+            <h4>Profile Settings</h4>
+          </Card.Title>
+          <Card.Text>
+          <p>Click here to update profile </p>
+          </Card.Text>
+          <Button variant= "secondary">Update profile</Button>
+        </Card.Body>
+      </Card>
+      
+      <Card className='mb-3' style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title style={{color : '#473352'}}>
+            <h4>Help</h4>
+          </Card.Title>
+          <Card.Text>
+          <p>Click here to contact the help desk</p>
+          </Card.Text>
+          <Button variant= "secondary">Help</Button>
+        </Card.Body>
+      </Card>
     </div>
-  );
-
+      <div>
+        
+        
+      </div>
+    </div>
+  )
 }
 
-export default OrdersCard
+export default AccountCards
