@@ -17,34 +17,8 @@ function ControlledCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>With SendIt, you can be saving time and creating consistent contact for your audience...</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2014/04/17/23/26/environmental-protection-326923_1280.jpg"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>With SendIt, you can create content and publish across all channels instantly.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2022/07/20/18/44/reading-7334749_960_720.png"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>
-          With SendIt, you can create content and publish across all channels instantly.
-          </p>
+          <h1>Welcome to SendIt</h1>
+          <p>With SendIt, you can be saving time because it's safest,fasterst and best delivery for your goods </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
