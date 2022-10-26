@@ -18,7 +18,7 @@ const ContactForm = () => {
   }
   return (
     <div className="form-group">
-      <h2 className="mb-3">Contact Us</h2>
+      <h4 className="mb-3">Contact Us</h4>
       
       <form className='ma' onSubmit={onSubmit}>
           <div class="form-group">
@@ -55,10 +55,7 @@ const ContactForm = () => {
         <button className="btn btn-danger" type="submit">
           {formStatus}
         </button>
-        <p>.</p>
         <h3>If you need help please call +254712345678</h3>
-        <p> .</p>
-        <p> .</p>
       </form>
     </div>
   )
