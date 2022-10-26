@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react";
-import { nanoid } from "nanoid";
 import "../App.css";
 import data from "../mock-data.json";
 import EditableRow from "./EditOrderForm";
@@ -10,17 +9,10 @@ import { Link } from "react-router-dom";
 
 const MyOrdersForm = () => {
   const [orders, setOrders] = useState(data);
-  const [addFormData, setAddFormData] = useState({
-    ordername: "",
-    from: "",
-    to: "",
-    price: "",
-    status: "",
-    contact :""
-  });
 
   const [editFormData, setEditFormData] = useState({
-    ordername: "",
+    order_id: " ",
+    customername: "",
     from: "",
     to: "",
     price: "",
@@ -29,17 +21,7 @@ const MyOrdersForm = () => {
 
   const [editOrderId, setEditOrderId] = useState(null);
 
-  const handleAddFormChange = (event) => {
-    event.preventDefault();
-
-    const fieldName = event.target.getAttribute("name");
-    const fieldValue = event.target.value;
-
-    const newFormData = { ...addFormData };
-    newFormData[fieldName] = fieldValue;
-
-    setAddFormData(newFormData);
-  };
+  
 
   const handleEditFormChange = (event) => {
     event.preventDefault();
@@ -53,28 +35,14 @@ const MyOrdersForm = () => {
     setEditFormData(newFormData);
   };
 
-  const handleAddFormSubmit = (event) => {
-    event.preventDefault();
-
-    const newOrder = {
-      id: nanoid(),
-      ordername: addFormData.ordername,
-      from: addFormData.from,
-      to: addFormData.to,
-      price: addFormData.price,
-      status: addFormData.status,
-    };
-
-    const newOrders = [...orders, newOrder];
-    setOrders(newOrders);
-  };
+  
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
     const editedOrder = {
-      id: editOrderId,
-      ordername: editFormData.ordername,
+      order_id: editOrderId,
+      customername: editFormData.customername,
       from: editFormData.from,
       to: editFormData.to,
       price: editFormData.price,
@@ -96,7 +64,8 @@ const MyOrdersForm = () => {
     setEditOrderId(order.id);
 
     const formValues = {
-      ordername: order.ordername,
+      order_id: order.order_id,
+      customername: order.customername,
       from: order.from,
       to: order.to,
       price: order.price,
@@ -129,7 +98,8 @@ const MyOrdersForm = () => {
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>Order Name</th>
+              <th>Order ID</th>
+              <th>Customer Name</th>
               <th>From</th>
               <th>To</th>
               <th>Price</th>
@@ -159,46 +129,7 @@ const MyOrdersForm = () => {
         </Table>
       </form>
 
-      <h2>Add an Order</h2>
-      <form onSubmit={handleAddFormSubmit}>
-        <input
-          type="text"
-          name="ordername"
-          required="required"
-          placeholder="Enter a name..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="from"
-          required="required"
-          placeholder="Enter from..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="to"
-          required="required"
-          placeholder="Enter to..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="number"
-          name="price"
-          required="required"
-          placeholder="Enter price..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="status"
-          required="required"
-          placeholder="Enter the status..."
-          onChange={handleAddFormChange}
-        />
-
-        <button type="submit">Add</button>
-      </form>
+      
 
    <Link to="/sendaparcel"> <Button>Send a Parcel</Button></Link>  
     </div>

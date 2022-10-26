@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button, } from 'react-bootstrap'
 import { Link }from "react-router-dom"
 import LatestOrders from './LatestOrders'
 
@@ -17,6 +17,7 @@ const AccountCards = () => {
     <div class="col d-flex justify-content-center">
       <Card className='mb-3' style={{ width: '20rem' }} variant= "light">
         <Card.Body>
+        <Card.Img variant="top" src='https://depositphotos.com/30770151/stock-photo-delivery-man-with-parcel-box.html' />
           <Card.Title style={{color : '#473352'}}>
             <h4>My orders</h4>
           </Card.Title>
@@ -54,12 +55,12 @@ const AccountCards = () => {
         <Card className='mb-3' style={{ width: '20rem' }}>
           <Card.Body>
             <Card.Title style={{color : '#473352'}}>
-              <h4>Help</h4>
+              <h4>Contact Us</h4>
             </Card.Title>
             <Card.Text>
-            <p>Click here to contact the help desk</p>
+            <p>Click here to contact us</p>
             </Card.Text>
-            <Button variant="info">Help</Button>
+            <Link to='/contactus' ><Button variant="info">Contact Us</Button></Link>
           </Card.Body>
         </Card>
       </div>

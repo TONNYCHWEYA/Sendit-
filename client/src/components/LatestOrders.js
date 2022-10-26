@@ -11,8 +11,8 @@ const LatestOrders = () => {
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Order Name</th>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
                         <th>From</th>
                         <th>To</th>
                         <th>Collecting date</th>
@@ -22,8 +22,8 @@ const LatestOrders = () => {
                 <tbody>
                     {orders.map((order)=> (
                     <tr>
-                        <td>{order.id}</td>
-                        <td>{order.ordername}</td>
+                        <td>{order.order_id}</td>
+                        <td>{order.customername}</td>
                         <td>{order.from}</td>
                         <td>{order.to}</td>
                         <td>{order.collectingdate}</td>
