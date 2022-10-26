@@ -4,7 +4,7 @@ import "../App.css";
 import data from "../mock-data.json";
 import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
-import { Button } from "react-bootstrap";
+import { Button,Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -126,7 +126,7 @@ const MyOrdersForm = () => {
     <div className="app-container">
       <h2 className="mb-3">My Orders</h2>
       <form onSubmit={handleEditFormSubmit}>
-        <table>
+        <Table striped bordered hover size="sm">
           <thead>
             <tr>
               <th>Order Name</th>
@@ -156,7 +156,7 @@ const MyOrdersForm = () => {
               </Fragment>
             ))}
           </tbody>
-        </table>
+        </Table>
       </form>
 
       <h2>Add an Order</h2>
