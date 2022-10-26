@@ -5,10 +5,11 @@ import {
  Link
   
  } from "react-router-dom";
+ import React from 'react';
 
 function Navb() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" style={{color: "red"}}>
       <Container>
         <Navbar.Brand href="#home">SENDIT</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

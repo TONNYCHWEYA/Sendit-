@@ -28,6 +28,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { Formik } from "formik"
 import * as yup from 'yup';
+import React from 'react';
 
 
 
@@ -72,8 +73,8 @@ function Signup() {
         isValid,
         errors,
       }) => (
-        <Form noValidate onSubmit={handleSubmit}>
-          <Row className="mb-3">
+        <Form noValidate onSubmit={handleSubmit} >
+          <Row className="mb-3 mt-3">
             <Form.Group as={Col} md="4" controlId="validationFormik01">
               <Form.Label>First name</Form.Label>
               <Form.Control
@@ -97,7 +98,7 @@ function Signup() {
 
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormikUsername">
+            <Form.Group as={Col} md="2" controlId="validationFormikUsername">
               <Form.Label>Username</Form.Label>
               <InputGroup hasValidation>
                 

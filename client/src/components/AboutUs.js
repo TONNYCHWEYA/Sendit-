@@ -1,7 +1,6 @@
 import React from 'react'
 import '../App.css'
 import { Card } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
 
 const AboutUs = () => {
   return (

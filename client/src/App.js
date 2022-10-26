@@ -7,45 +7,34 @@ import Signup from './components/Signup';
 import {
  Routes,
   Route
- 
-} from "react-router-dom";
+ } from "react-router-dom";
 import Sendaparcel from './components/Sendaparcel';
 import Login from './components/Login';
 import Home from './components/Home'
+import React from 'react';
 
 
 function App() {
   return (
     <div className="App">
       <Navb />
-     <Signup />
-      <ContactForm />
-      <AboutUs/>
+     
 
       <Routes>
-          <Route path="/about">
-            <AboutUs/>
-          </Route>
-          <Route path="/contactus">
-            <ContactForm />
-          </Route>
+          <Route path="/about" element={<AboutUs/>}/>
+          
+          <Route path="/contactus" element={<ContactForm />}/>
 
-          <Route path="/login">
-            <Login />
-          </Route>
-
-          <Route path="/signup">
-            <Signup />
-          </Route>
-
-          <Route path="/sendaparcel">
-            <Sendaparcel />
-          </Route>
-
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Routes>
+          <Route path="/login" element={<Login />}/>
+           
+          <Route path="/signup" element={<Signup />}/>
+            
+          <Route path="/sendaparcel" element={<Sendaparcel />}/>
+          
+          <Route exact path="/" element={<Home />}/>
+   
+       </Routes >
+       
 
     </div>
   )
