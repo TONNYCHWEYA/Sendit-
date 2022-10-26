@@ -18,7 +18,20 @@ function ControlledCarousel() {
         />
         <Carousel.Caption>
           <h1>Welcome to SendIt</h1>
-          <p>With SendIt, you can be saving time because it's safest,fasterst and best delivery for your goods </p>
+          <p>With SendIt, you can be saving time because it's safest,fastest and best delivery for your goods </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images.pexels.com/photos/4246264/pexels-photo-4246264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h1>Enjoy with our courier service</h1>
+          <p>
+Courier services focuses on express and door-to-door delivery. Couriers may use self-owned, privately shared or public transportation to supply these services.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
