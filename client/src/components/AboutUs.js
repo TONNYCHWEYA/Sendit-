@@ -72,7 +72,7 @@ const AboutUs = () => {
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src="https://www.pexels.com/photo/a-man-and-a-woman-working-for-a-delivery-company-6169668/"
+                        src="https://www.pexels.com/photo/man-in-white-button-up-shirt-delivering-packages-6868556/"
                         alt="First slide"
                     />
                     <Carousel.Caption>

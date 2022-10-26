@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { Card, Button } from 'react-bootstrap'
+import { Link }from "react-router-dom"
 
 const AccountCards = () => {
   return (
@@ -21,7 +22,7 @@ const AccountCards = () => {
           <Card.Text>
           <p>Click here to see the orders you have made </p>
           </Card.Text>
-          <Button variant= "secondary">Orders</Button>
+         <Link to='/myordersform' ><Button variant= "secondary">Orders</Button></Link>
         </Card.Body>
       </Card>
 

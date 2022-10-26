@@ -4,6 +4,9 @@ import "../App.css";
 import data from "../mock-data.json";
 import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 const MyOrdersForm = () => {
   const [orders, setOrders] = useState(data);
@@ -195,6 +198,8 @@ const MyOrdersForm = () => {
 
         <button type="submit">Add</button>
       </form>
+
+   <Link to="/sendaparcel"> <Button>Send a Parcel</Button></Link>  
     </div>
   );
 };
