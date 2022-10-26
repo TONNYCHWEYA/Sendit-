@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { Card, Button } from 'react-bootstrap'
+import { Link }from "react-router-dom"
 import LatestOrders from './LatestOrders'
 
 const AccountCards = () => {
@@ -13,18 +14,18 @@ const AccountCards = () => {
           </Card.Title>
         </Card.Body>
       </Card>
-      <div class="col d-flex justify-content-center">
-        <Card className='mb-3' style={{ width: '20rem' }}>
-          <Card.Body>
-            <Card.Title style={{color : '#473352'}}>
-              <h4>My orders</h4>
-            </Card.Title>
-            <Card.Text>
-            <p>Click here to see the orders you have made </p>
-            </Card.Text>
-            <Button variant= "secondary">Orders</Button>
-          </Card.Body>
-        </Card>
+    <div class="col d-flex justify-content-center">
+      <Card className='mb-3' style={{ width: '20rem' }}>
+        <Card.Body>
+          <Card.Title style={{color : '#473352'}}>
+            <h4>My orders</h4>
+          </Card.Title>
+          <Card.Text>
+          <p>Click here to see the orders you have made </p>
+          </Card.Text>
+         <Link to='/myordersform' ><Button variant= "secondary">Orders</Button></Link>
+        </Card.Body>
+      </Card>
 
         <Card className='mb-3' style={{ width: '20rem' }}>
           <Card.Body>
