@@ -17,7 +17,7 @@ const AccountCards = () => {
     <div class="col d-flex justify-content-center">
       <Card className='mb-3' style={{ width: '20rem' }} variant= "light">
         <Card.Body>
-        <Card.Img variant="top" src='https://depositphotos.com/30770151/stock-photo-delivery-man-with-parcel-box.html' />
+        <Card.Img variant="top" src='' />
           <Card.Title style={{color : '#473352'}}>
             <h4>My orders</h4>
           </Card.Title>
