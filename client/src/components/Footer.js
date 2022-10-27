@@ -1,0 +1,74 @@
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBFooter className="shadow" style={{ background: "#1A237E", color: "white"}}>
+      <CDBBox
+        display="flex"
+        flex="column"
+        className="mx-auto py-5"
+        style={{ width: "90%" }}
+      >
+        <CDBBox display="flex" justifyContent="between" className="flex-wrap">
+          <CDBBox>
+            <a href="/" className="d-flex align-items-center p-0 text-dark">
+              <span className="ml-3 h5 font-weight-bold">SENDIT</span>
+            </a>
+            <p className="my-2" style={{ width: "250px" }}>
+              SendIT is a courier service that helps users deliver parcels to
+              different destinations.
+            </p>
+            <CDBBox display="flex" className="mt-4">
+              <CDBBtn flat color="dark">
+                <CDBIcon fab icon="facebook-f" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="mx-3">
+                <CDBIcon fab icon="twitter" />
+              </CDBBtn>
+              <CDBBtn flat color="dark" className="p-2">
+                <CDBIcon fab icon="instagram" />
+              </CDBBtn>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: "600" }}>
+              Quick Link
+            </p>
+            <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
+              <CDBFooterLink href="/">Home</CDBFooterLink>
+              <CDBFooterLink href="/">About Us</CDBFooterLink>
+              <CDBFooterLink href="/">Contact</CDBFooterLink>
+              <CDBFooterLink href="/">Send a parcels</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: "600" }}>
+              Help
+            </p>
+            <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
+              <CDBFooterLink href="/">Support</CDBFooterLink>
+              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+              <CDBFooterLink href="/">Sign In</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+          <CDBBox>
+            <p className="h5 mb-4" style={{ fontWeight: "600" }}>
+              My Account
+            </p>
+            <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
+              <CDBFooterLink href="/">My orders</CDBFooterLink>
+              <CDBFooterLink href="/">address Book</CDBFooterLink>
+              <CDBFooterLink href="/">Profile setting</CDBFooterLink>
+            </CDBBox>
+          </CDBBox>
+        </CDBBox>
+        <small className="text-center mt-5">
+          &copy; SendIt, 2022. All rights reserved.
+        </small>
+      </CDBBox>
+    </CDBFooter>
+  );
+};
+
+export default Footer;
