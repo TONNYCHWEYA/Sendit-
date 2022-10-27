@@ -74,8 +74,8 @@ function Map() {
       position='relative'
       flexDirection='column'
       alignItems='center'
-      h='100vh'
-      w='100vw'
+      h='80vh'
+      w='80vw'
     >
       <Box position='absolute' left={0} top={0} h='100%' w='100%'>
         {/* Google Map Box */}

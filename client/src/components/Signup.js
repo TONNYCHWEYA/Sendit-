@@ -28,7 +28,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { Formik } from "formik"
 import * as yup from 'yup';
-import React from 'react';
+import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -49,13 +50,48 @@ const schema = yup.object().shape({
 });
 
 function Signup() {
+
+  const [state, setState] = useState({
+    firstName: '',
+    lastName: '',
+    username: '',
+    password: '',
+    email: '',
+    phonenumber: '' ,
+    
+    terms: false,
+  })
+
+const navigate = useNavigate();
+const [errors, setErrors] = useState([]);
+function onChange(e) {
+  setState({...state, [e.target.name]: e.target.value})
+}
+
+function HandleSubmit(e) {
+  e.preventDefault()
+fetch("", {
+  method: "POST",
+  headers: {
+    "Content-Type":"application/json"
+  },
+  body: JSON.stringify(state)
+}).then((r) => {
+  if (r.ok) {
+      navigate("/login")
+  } else {
+    r.json().then((err) => setErrors(err.errors))
+    }
+  })
+}
+
   return (
     <Formik
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        firstName: 'Mark',
-        lastName: 'Otto',
+        firstName: '',
+        lastName: '',
         username: '',
         password: '',
         email: '',
@@ -74,6 +110,8 @@ function Signup() {
         errors,
       }) => (
         <Form noValidate onSubmit={handleSubmit} >
+          <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
           <Row className="mb-3 mt-3">
             <Form.Group as={Col} md="4" controlId="validationFormik01">
               <Form.Label>First name</Form.Label>

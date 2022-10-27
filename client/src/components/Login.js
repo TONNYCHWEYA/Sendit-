@@ -3,6 +3,15 @@ import { Button, Form, Col, Row, Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react'
+import styled from "styled-components"
+const Style = styled.div`
+ margin: 40px;
+padding: 50px
+ .button{
+  margin-top: 30px;
+ }
+ 
+`;
 
 function Login() {
 
@@ -33,8 +42,9 @@ function Login() {
     })
   }
   return (
-    <div>
-      <Container>
+    <Style>
+      <h1>Login</h1>
+     
       <Form onSubmit={handleSubmit}>
       <p className='error'>{ error}</p>
       <Form.Group as={Row} className="mb-3 mt-3" controlId="formBasicEmail">
@@ -53,13 +63,13 @@ function Login() {
         <Form.Control type="password" placeholder="Password" name='password' onChange={handleChange} required size="sm" />
         </Col>
       </Form.Group>
-      <p className="message" >Not yet registered click <Link to={"/signup"}>here</Link> to signup</p>
-      <Button variant="primary" type="submit">
+      <p className="message" >Not yet registered click <Link to={"/signup"}><Button>here</Button></Link> to signup</p>
+      <Button variant="primary" type="submit" className='button'>
         Login
       </Button>
       </Form>
-      </Container>
-    </div>
+     
+    </Style>
   )
 }
 

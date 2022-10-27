@@ -24,7 +24,15 @@ import * as yup from 'yup';
 import Map from './Map'
 import { Container } from 'react-bootstrap'
 
+import styled from "styled-components"
 
+const Style = styled.div`
+ margin: 40px;
+
+ .button{
+  margin-top: 40px;
+ }
+`;
 
 const schema = yup.object().shape({
   RecipientName: yup.string().required(),
@@ -36,11 +44,13 @@ const schema = yup.object().shape({
 
 function Sendaparcel() {
   return (
+    <Style>
+   
     <Formik
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        RecipientName: 'Mark',
+        RecipientName: '',
         Recipient_contact: '',
         weigth_in_kg: '',
        
@@ -59,7 +69,7 @@ function Sendaparcel() {
         <Form noValidate onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Receiptient Name</Form.Label>
               <Form.Control
                 type="text"
                 name="Recipient_Name"
@@ -104,10 +114,12 @@ function Sendaparcel() {
             <Map />
           </Container>
          
-          <Button type="submit">Send a parcel</Button>
+          <Button type="submit" className='button'>Send a parcel</Button>
         </Form>
       )}
     </Formik>
+    
+    </Style>
   );
 }
 
