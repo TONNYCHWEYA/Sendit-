@@ -1,17 +1,19 @@
 [
   {
-    "id": 1,
-    "ordername": "Chairs",
+    "order_id": 1,
+    "customername": "Marion Wanyama",
     "from": "Nairobi",
     "to": "Machakos",
+    "collectingdate": "27/10/2022",
     "price": "1000",
     "status" : "delivered"
   },
   {
-    "id": 2,
-    "ordername": "table",
+    "order_id": 2,
+    "customername": "Karen Nafula",
     "from": "Webuye",
     "to": "Kisumu",
+    "collectingdate": "29/10/2022",
     "price": "1500",
     "status" : "pending"
   }

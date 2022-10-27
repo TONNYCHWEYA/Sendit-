@@ -3,7 +3,8 @@ import React from "react";
 const ReadOnlyRow = ({ order, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
-      <td>{order.ordername}</td>
+      <td>{order.order_id}</td>
+      <td>{order.customername}</td>
       <td>{order.from}</td>
       <td>{order.to}</td>
       <td>{order.price}</td>

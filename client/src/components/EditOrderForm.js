@@ -11,9 +11,19 @@ const EditableRow = ({
         <input
           type="text"
           required="required"
-          placeholder="Enter a ordername..."
-          name="ordername"
-          value={editFormData.ordername}
+          placeholder="Enter an order_id..."
+          name="order_id"
+          value={editFormData.order_id}
+          onChange={handleEditFormChange}
+        ></input>
+      </td>
+      <td>
+        <input
+          type="text"
+          required="required"
+          placeholder="Enter a customername..."
+          name="customername"
+          value={editFormData.customername}
           onChange={handleEditFormChange}
         ></input>
       </td>
@@ -62,6 +72,7 @@ const EditableRow = ({
         <button type="button" onClick={handleCancelClick}>
           Cancel
         </button>
+        
       </td>
     </tr>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Card,Button } from 'react-bootstrap'
 
 
 const ContactForm = () => {
@@ -18,8 +19,15 @@ const ContactForm = () => {
   }
   return (
     <div className="form-group">
-      <h2 className="mb-3">Contact Us</h2>
-      
+      <Card style={{background: '#1A237E', color: 'white',margin:'20px'}}>
+        <Card.Body>
+          <Card.Title>
+            <h3>Contact Us</h3>
+          </Card.Title>
+        </Card.Body>
+      </Card>
+
+      <Card style={{background: '#E8EAF6'}}>
       <form className='ma' onSubmit={onSubmit}>
           <div class="form-group">
             <div className="mb-3">
@@ -52,14 +60,18 @@ const ContactForm = () => {
             <textarea className="form-control" id="message" required />
           </div>
         </div>
-        <button className="btn btn-danger" type="submit">
+        <Button  type="submit" style={{background: '#1A237E', color: 'white'}}>
           {formStatus}
-        </button>
-        <p>.</p>
-        <h3>If you need help please call +254712345678</h3>
-        <p> .</p>
-        <p> .</p>
+        </Button>
+        <Card style={{background: '#1A237E', color: 'white'}}>
+        <Card.Body>
+          <Card.Title>
+          <h3>If you need help please call +254712345678</h3>
+          </Card.Title>
+        </Card.Body>
+      </Card>
       </form>
+      </Card>
     </div>
   )
 }
