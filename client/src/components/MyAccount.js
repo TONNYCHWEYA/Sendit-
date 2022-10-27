@@ -37,7 +37,7 @@ const AccountCards = () => {
         <Card className='mb-3' style={{ width: '20rem', background:'#E8EAF6', margin:'20px' }}>
           <Card.Body>
             <Card.Title style={{color : '#473352'}}>
-              <h4>Adress Book</h4>
+              <h4>Adrress Book</h4>
             </Card.Title>
             <img src={require('../images/location.jpg').default}  alt=''/>
             <img src= {location} alt='' width={200} height={200} />
