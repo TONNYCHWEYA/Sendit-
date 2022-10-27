@@ -93,10 +93,10 @@ const MyOrdersForm = () => {
   return (
 
     <div className="app-container">
-      <Card style={{background: '#1A237E', color: 'white'}}>
+      <Card style={{background: '#1A237E', color: 'white', margin:'20px'}}>
         <Card.Body>
           <Card.Title>
-            <h3>About Us</h3>
+            <h3>My Orders</h3>
           </Card.Title>
         </Card.Body>
       </Card>
