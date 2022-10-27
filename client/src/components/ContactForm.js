@@ -63,13 +63,6 @@ const ContactForm = () => {
         <Button  type="submit" style={{background: '#1A237E', color: 'white'}}>
           {formStatus}
         </Button>
-        <Card style={{background: '#1A237E', color: 'white'}}>
-        <Card.Body>
-          <Card.Title>
-          <h3>If you need help please call +254712345678</h3>
-          </Card.Title>
-        </Card.Body>
-      </Card>
       </form>
       </Card>
     </div>
