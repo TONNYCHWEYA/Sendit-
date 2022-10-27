@@ -8,7 +8,7 @@ import courier7 from '../images/courier7.jpeg'
 const AccountCards = () => {
   return (
     <div className='about-us'>
-      <Card style={{background: '#1A237E', color: 'white'}}>
+      <Card style={{background: '#1A237E', color: 'white', margin:'20px'}}>
         <Card.Body>
           <Card.Title>
             <h3>My Account</h3>
@@ -16,7 +16,7 @@ const AccountCards = () => {
         </Card.Body>
       </Card>
     <div class="col d-flex justify-content-center">
-      <Card className='mb-3' style={{ width: '20rem',background:'#C5CAE9' }} variant= "light">
+      <Card className='mb-3' style={{ width: '20rem',background:'#C5CAE9',margin:'20px' }} variant= "light">
         <Card.Body>
         <Card.Img variant="top" src='' />
           <Card.Title >
@@ -27,11 +27,11 @@ const AccountCards = () => {
           <Card.Text>
           <p>Click here to see the orders you have made </p>
           </Card.Text>
-         <Link to='/myordersform' ><Button variant="info">Orders</Button></Link>
+         <Link to='/myordersform' ><Button style={{background: '#1A237E', color: 'white'}} >Orders</Button></Link>
         </Card.Body>
       </Card>
 
-        <Card className='mb-3' style={{ width: '20rem', background:'#E8EAF6' }}>
+        <Card className='mb-3' style={{ width: '20rem', background:'#E8EAF6', margin:'20px' }}>
           <Card.Body>
             <Card.Title style={{color : '#473352'}}>
               <h4>Adress Book</h4>
@@ -39,11 +39,11 @@ const AccountCards = () => {
             <Card.Text>
             <p>Click here to view the address book </p>
             </Card.Text>
-            <Button variant="info">Adress Book</Button>
+            <Button style={{background: '#1A237E', color: 'white'}}>Adress Book</Button>
           </Card.Body>
         </Card>
         
-        <Card className='mb-3' style={{ width: '20rem', background:'#C5CAE9' }}>
+        <Card className='mb-3' style={{ width: '20rem', background:'#C5CAE9', margin:'20px' }}>
           <Card.Body>
             <Card.Title style={{color : '#473352'}}>
               <h4>Profile Settings</h4>
@@ -51,11 +51,11 @@ const AccountCards = () => {
             <Card.Text>
             <p>Click here to update profile </p>
             </Card.Text>
-            <Button variant="info">Update profile</Button>
+            <Button style={{background: '#1A237E', color: 'white'}}>Update profile</Button>
           </Card.Body>
         </Card>
         
-        <Card className='mb-3' style={{ width: '20rem', background:'#E8EAF6' }}>
+        <Card className='mb-3' style={{ width: '20rem', background:'#E8EAF6', margin:'20px'  }}>
           <Card.Body>
             <Card.Title style={{color : '#473352'}}>
               <h4>Contact Us</h4>
@@ -63,7 +63,7 @@ const AccountCards = () => {
             <Card.Text>
             <p>Click here to contact us</p>
             </Card.Text>
-            <Link to='/contactus' ><Button variant="info">Contact Us</Button></Link>
+            <Link to='/contactus' ><Button style={{background: '#1A237E', color: 'white'}}>Contact Us</Button></Link>
           </Card.Body>
         </Card>
       </div>

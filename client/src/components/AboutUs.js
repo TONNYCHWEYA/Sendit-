@@ -17,7 +17,7 @@ import courier13 from '../images/courier13.jpeg'
 const AboutUs = () => {
   return (
     <div className='about-us'>
-      <Card style={{background: '#1A237E', color: 'white'}}>
+      <Card style={{background: '#1A237E', color: 'white', margin:'20px'}}>
         <Card.Body>
           <Card.Title>
             <h3>About Us</h3>
@@ -25,9 +25,9 @@ const AboutUs = () => {
         </Card.Body>
       </Card>
       <div class="col d-flex justify-content-center">
-        <Card className='mb-3' style={{ width: '50rem', background:'#C5CAE9'}}>
+        <Card className='mb-3' style={{ width: '50rem', background:'#C5CAE9', margin:'20px'}}>
           <Card.Body>
-            <Card.Title style={{color : '#473352'}}>
+            <Card.Title>
               Our Mission
             </Card.Title>
             <Card.Text>
@@ -36,7 +36,7 @@ const AboutUs = () => {
           </Card.Body>
         </Card>
 
-        <Card className='mb-3' style={{ width: '50rem', background:'#E8EAF6' }}>
+        <Card className='mb-3' style={{ width: '50rem', background:'#E8EAF6', margin:'20px' }}>
           <Card.Body>
             <Card.Title style={{color : '#000'}}>
               Our Vision
@@ -47,7 +47,7 @@ const AboutUs = () => {
           </Card.Body>
         </Card>
         
-        <Card className='mb-3' style={{ width: '50rem', background:'#C5CAE9' }}>
+        <Card className='mb-3' style={{ width: '50rem', background:'#C5CAE9', margin:'20px' }}>
           <Card.Body >
             <Card.Title style={{color : '#000'}}>
               Our Values
@@ -64,10 +64,10 @@ const AboutUs = () => {
           </Card.Body>
         </Card>
         
-        <Card className='mb-3' style={{ width: '50rem', background:'#E8EAF6' }}>
+        <Card className='mb-3' style={{ width: '50rem', background:'#E8EAF6',margin:'20px' }}>
           <Card.Img src=''/>
           <Card.Body>
-            <Card.Title style={{color : '#000'}}>
+            <Card.Title >
               Our Purpose
             </Card.Title>
             <Card.Text>
@@ -79,7 +79,7 @@ const AboutUs = () => {
         </Card>
       </div>
       <div className='about-us'>
-        <Card style={{background: '#1A237E', color: 'white'}}>
+        <Card style={{background: '#1A237E', color: 'white',margin:'20px'}}>
           <Card.Body>
             <Card.Title>
               <h3>Our Photos</h3>
@@ -89,53 +89,53 @@ const AboutUs = () => {
         </Card>
       </div>
       <div class="col d-flex justify-content-center">
-        <Card className='mb-3' style={{ width: '18rem'}}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px'}}>
         <img src={require('../images/courier1.jpg').default}  alt=''/>
         <img src= {courier1} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier4.jpeg').default}  alt=''/>
         <img src= {courier4} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier5.jpg').default}  alt=''/>
         <img src= {courier5} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier7.jpeg').default}  alt=''/>
         <img src= {courier7} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier6.jpeg').default}  alt=''/>
         <img src= {courier6} alt='' width={400} height={400} />
         </Card>
       </div>
       <div class="col d-flex justify-content-center">
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem',margin:'20px' }}>
         <img src={require('../images/courier8.jpeg').default}  alt=''/>
         <img src= {courier8} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier9.jpeg').default}  alt=''/>
         <img src= {courier9} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier11.jpeg').default}  alt=''/>
         <img src= {courier11} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier12.jpeg').default}  alt=''/>
         <img src= {courier12} alt='' width={400} height={400} />
         </Card>
 
-        <Card className='mb-3' style={{ width: '18rem' }}>
+        <Card className='mb-3' style={{ width: '18rem', margin:'20px' }}>
         <img src={require('../images/courier13.jpeg').default}  alt=''/>
         <img src= {courier13} alt='' width={400} height={400} />
         </Card>

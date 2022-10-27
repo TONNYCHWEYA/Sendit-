@@ -3,7 +3,7 @@ import "../App.css";
 import data from "../mock-data.json";
 import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
-import { Button,Table } from "react-bootstrap";
+import { Button,Table,Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
@@ -93,7 +93,13 @@ const MyOrdersForm = () => {
   return (
 
     <div className="app-container">
-      <h2 className="mb-3">My Orders</h2>
+      <Card style={{background: '#1A237E', color: 'white'}}>
+        <Card.Body>
+          <Card.Title>
+            <h3>About Us</h3>
+          </Card.Title>
+        </Card.Body>
+      </Card>
       <form onSubmit={handleEditFormSubmit}>
         <Table striped bordered hover size="sm">
           <thead>
