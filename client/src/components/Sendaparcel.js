@@ -15,10 +15,10 @@
 // export default Sendaparcel
 
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
+
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Row from 'react-bootstrap/Row';
+
 import { Formik } from "formik"
 import * as yup from 'yup';
 import Map from './Map'
@@ -57,8 +57,8 @@ function Sendaparcel() {
         errors,
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
-          <Row className="mb-3">
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
+          
+            <Form.Group  controlId="validationFormik01">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
@@ -69,7 +69,7 @@ function Sendaparcel() {
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormik02">
+            <Form.Group  controlId="validationFormik02">
               <Form.Label>Recipient Contact</Form.Label>
               <Form.Control
                 type="text"
@@ -81,7 +81,7 @@ function Sendaparcel() {
 
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormikUsername">
+            <Form.Group  controlId="validationFormikUsername">
               <Form.Label> weigth_in_kg</Form.Label>
               <InputGroup hasValidation>
                 <Form.Control
@@ -98,7 +98,7 @@ function Sendaparcel() {
                 </Form.Control.Feedback>
               </InputGroup>
             </Form.Group>
-          </Row>
+          
 
           <Container>
             <Map />
