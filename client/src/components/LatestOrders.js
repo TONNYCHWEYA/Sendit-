@@ -1,13 +1,19 @@
 import {useState} from 'react';
 import "../App.css"
-import {Table } from 'react-bootstrap'
+import {Table, Card } from 'react-bootstrap'
 import data from '../mock-data.json'
 
 const LatestOrders = () => {
     const [orders] = useState(data);
     return(
         <div className="app-container">
-            <h3>Latest Orders</h3>
+            <Card style={{background: '#1A237E', color: 'white'}}>
+                <Card.Body>
+                <Card.Title>
+                    <h3>Latest Orders</h3>
+                </Card.Title>
+                </Card.Body>
+            </Card>
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
