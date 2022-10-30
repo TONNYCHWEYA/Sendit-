@@ -14,6 +14,8 @@ import Home from './components/Home'
 import React from 'react';
 import MyAccount from './components/MyAccount'
 import MyOrdersForm from './components/MyOrdersForm'
+import Footer from './components/Footer';
+
 
 
 function App() {
@@ -37,12 +39,14 @@ function App() {
           <Route path="/myordersform" element={<MyOrdersForm />}/>
           
           <Route exact path="/" element={<Home />}/>
-   
+          <Route exact path="/" element={<Footer />}/>
        </Routes >
        
-
+<Footer/>
     </div>
   );
 }
 
 export default App;
+
+

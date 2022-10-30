@@ -24,16 +24,15 @@ import { useRef, useState } from 'react'
 
 const center = { lat: 48.8584, lng: 2.2945 }
 
-function Map() {
+function Map({ distance, setDistance, duration, setDuration }) {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyBsj6LpThC0p_EuB_kxHS2XSMLjg0Z4GHg',
+    googleMapsApiKey: 'AIzaSyDygUcllRz7Tceu4NuKhogml8gPunQrpJw',
     libraries: ['places'],
   })
 
   const [map, setMap] = useState(/** @type google.maps.Map */ (null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
-  const [distance, setDistance] = useState('')
-  const [duration, setDuration] = useState('')
+  
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()

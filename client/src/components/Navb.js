@@ -6,10 +6,19 @@ import {
   
  } from "react-router-dom";
  import React from 'react';
+ import styled from "styled-components"
+ const Style = styled.div`
+ .nav{
+  background-color: #1A237E;
+  text-color: white;
+ }
+
+`;
 
 function Navb() {
   return (
-    <Navbar bg="light" expand="lg" style={{color: "red"}}>
+    <Style>
+    <Navbar expand="lg" className='nav' style={{background: '#1A237E', color: 'white'}}>
       <Container>
         <Navbar.Brand href="#home">SENDIT</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,6 +34,7 @@ function Navb() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </Style>
   );
 }
 

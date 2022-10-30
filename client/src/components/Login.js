@@ -26,7 +26,7 @@ function Login() {
   const [error, setError] = useState("")
   function handleSubmit(e) {
     e.preventDefault()
-    fetch("", {
+    fetch("http://127.0.0.1:3000/login", {
       method: "POST",
       credentials: 'include',
       headers: {

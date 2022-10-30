@@ -1,65 +1,32 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react';
+import '../App.css';
+import { Button } from './Button';
 
-function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
+function Home() {
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2022/09/07/10/01/landscape-7438429_960_720.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>With SendIt, you can be saving time and creating consistent contact for your audience...</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2014/04/17/23/26/environmental-protection-326923_1280.jpg"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>With SendIt, you can create content and publish across all channels instantly.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2022/07/20/18/44/reading-7334749_960_720.png"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Welcome to SendIt</h3>
-          <p>
-          With SendIt, you can create content and publish across all channels instantly.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className='hero-container'>
+      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <h1>WELCOME TO SENDIT</h1>
+      <p>SendIt Is responsible for transporting packages and other goods from a mail facility to a personal or business address</p>
+      <div className='hero-btns'>
+        <Button
+          className='btns'
+          buttonStyle='btn--outline'
+          buttonSize='btn--large'
+        >
+          GET STARTED
+        </Button>
+        <Button
+          className='btns'
+          buttonStyle='btn--primary'
+          buttonSize='btn--large'
+          onClick={console.log('hey')}
+        >
+          TALK TO US TODAY <i className='far fa-play-circle' />
+        </Button>
+      </div>
+    </div>
   );
 }
 
-// render(<ControlledCarousel />);
-
-const Home = () => {
-    return (
-        <section className='Home'>
-            <div className='container'>
-                <ControlledCarousel/>
-            </div>
-        </section>
-    )
-}
 export default Home;
