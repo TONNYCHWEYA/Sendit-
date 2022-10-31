@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  recipient_name: MyString
+  recipient_contact: 1
+  weight: 1
+  from: MyString
+  destination: MyString
+  time_dispatched: 2022-10-20 11:34:48
+
+two:
+  description: MyString
+  recipient_name: MyString
+  recipient_contact: 1
+  weight: 1
+  from: MyString
+  destination: MyString
+  time_dispatched: 2022-10-20 11:34:48

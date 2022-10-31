@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parcel_id: 1
+  parcel_carrier_id: 1
+  time_assigned: MyString
+  time_completed: MyString
+
+two:
+  parcel_id: 1
+  parcel_carrier_id: 1
+  time_assigned: MyString
+  time_completed: MyString
