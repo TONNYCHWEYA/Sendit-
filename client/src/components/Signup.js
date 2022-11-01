@@ -25,10 +25,9 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Row from 'react-bootstrap/Row';
-import { Formik, useFormik } from "formik"
+import { Formik } from "formik"
 import * as yup from 'yup';
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from "react-router-dom";
 
 import styled from "styled-components"
@@ -48,63 +47,51 @@ const Style = styled.div`
   }
 
   .btn{
-    width: 200px;
-    margin-left: 360px;
+  
+   
   }
  }
 
  
 `;
 
-const  number_regex = /\w+@\w+\.{1}[a-zA-Z]{2,}/
+
+
+function Signup() {
+
+  const  number_regex = /\w+@\w+\.{1}[a-zA-Z]{2,}/
 const schema = yup.object().shape({
-  firstName: yup.string().required("Required"),
-  lastName: yup.string().required("Required"),
+  first_name: yup.string().required("Required"),
+  last_name: yup.string().required("Required"),
   username: yup.string().required("Required"),
  password: yup.string()
   .min(6, 'Password must be atleast 6 characters')
   .max(20,"Password exceeds 20 characters")
-  .matches(number_regex, {message: "Please create a strong password"})
+  
   .required("Required"),
-  email:yup.string()
+  email_address: yup.string()
   .email('Email must be valid')
   .required('Email required'),
-  phonenumber:yup
+  phone_number:yup
   .number()
   
   .required("Required"),
-  isAdmin: yup.bool().oneOf([true], 'Terms must be accepted'),
+  // isAdmin: yup.bool().oneOf([true], 'Issue admin rights'),
 });
 
-function Signup() {
-
-  
-
 const navigate = useNavigate();
-// const [errors, setErrors] = useState([]);
-// function handleChange(e) {
-//   setState({...state, [e.target.name]: e.target.value})
-// }
 
-const handleSubmit = (values, actions, e) => {
-  e.preventdefault()
-  console.log("submitted");
-  console.log(actions);
-  fetch("http://localhost:3000/signup", {
-    method: "POST",
-     headers: {
-       "Content-Type":"application/json"
-     },
-  body: JSON.stringify(values)
-   }).then((r) => {
-   if (r.ok) {
-       navigate("/login")
-     } else {
-      //  r.json().then((err) => setErrors(err.errors))
-      }
-     })
 
-};
+// function onSubmit(values, actions ) {
+
+//   console.log(values)
+//   console.log(actions)
+  // e.preventdefault()
+  // console.log("submitted");
+  // console.log(actions);
+ 
+
+
 
 
 
@@ -116,10 +103,11 @@ const handleSubmit = (values, actions, e) => {
 
 
   return (
+    <Style>
     
     <Formik
       validationSchema={schema}
-      onSubmit={handleSubmit}
+      
       initialValues={{
         first_name: '',
         last_name: '',
@@ -127,11 +115,41 @@ const handleSubmit = (values, actions, e) => {
         password: '',
         email_address: '',
         phone_number: '' ,
-        isAdmin: false
+        // isAdmin: false,
         
        
       }}
-      onChange
+
+      onSubmit={(values, actions) => {
+        // When button submits form and form is in the process of submitting, submit button is disabled
+        
+        console.log(values)
+
+      //   // Simulate submitting to database, shows us values submitted, resets form
+      // setTimeout(() => {
+      //   alert(JSON.stringify(values, null, 2));
+      //   resetForm();
+      //   setSubmitting(false);
+      // }, 500);
+
+      fetch("http://[::1]:3000/sign_up", {
+        method: "POST",
+         headers: {
+           "Content-Type":"application/json"
+         },
+      body: JSON.stringify(values)
+       }).then((r) => {
+        console.log(r)
+       if (r.ok) {
+           navigate("/login")
+         } else {
+          //  r.json().then((err) => setErrors(err.errors))
+          }
+         })
+
+      
+    }}
+      
       
     >
       {({
@@ -142,8 +160,10 @@ const handleSubmit = (values, actions, e) => {
         touched,
         isValid,
         errors,
+      
+        submitForm
       } ) => (
-        <Style>
+       
           
         <Form noValidate onSubmit={handleSubmit}  className='form'>
           <h1>Sign Up</h1>
@@ -157,8 +177,9 @@ const handleSubmit = (values, actions, e) => {
                 value={values.first_name}
                 onChange={handleChange}
                 isValid={touched.first_name && !errors.first_name}
+                isInvalid={!!errors.first_name}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback>{errors.first_name}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationFormik02">
               <Form.Label>Last name</Form.Label>
@@ -168,9 +189,10 @@ const handleSubmit = (values, actions, e) => {
                 value={values.last_name}
                 onChange={handleChange}
                 isValid={touched.last_name && !errors.last_name}
+                isInvalid={!!errors.last_name}
               />
 
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback type="invalid">{errors.last_name}</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationFormikUsername">
               <Form.Label>Username</Form.Label>
@@ -184,6 +206,7 @@ const handleSubmit = (values, actions, e) => {
                   value={values.username}
                   onChange={handleChange}
                   isInvalid={!!errors.username}
+                  isValid={touched.username && !errors.username}
                 />
                 <Form.Control.Feedback type="invalid">
                   {errors.username}
@@ -196,15 +219,16 @@ const handleSubmit = (values, actions, e) => {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                name="email"
-                value={values.email}
+                name="email_address"
+                value={values.email_address}
                 onChange={handleChange}
-                isValid={touched.email && errors.email}
+                isValid={touched.email_address && !errors.email_address}
+                isInvalid={!!errors.email_address}
               />
                <Form.Control.Feedback type="invalid">
-                  {errors.email}
+                  {errors.email_address}
                 </Form.Control.Feedback>
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+             
             </Form.Group>
 
             <Form.Group as={Col} md="4" controlId="validationFormik04">
@@ -215,11 +239,12 @@ const handleSubmit = (values, actions, e) => {
                 value={values.password}
                 onChange={handleChange}
                 isValid={touched.password && !errors.password}
+                isInvalid={!!errors.password}
               />
                <Form.Control.Feedback type="invalid">
                   {errors.password}
                 </Form.Control.Feedback>
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            
             </Form.Group>
 
             <Form.Group as={Col} md="4" controlId="validationFormik05">
@@ -230,31 +255,37 @@ const handleSubmit = (values, actions, e) => {
                 value={values.phone_number}
                 onChange={handleChange}
                 isValid={touched.phone_number && !errors.phone_number}
+                isInvalid={!!errors.phone_number}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback>{errors.phone_number}</Form.Control.Feedback>
             </Form.Group>
            
           
           
-          <Form.Group className="mb-3">
+          {/* <Form.Group className="mb-3">
             <Form.Check
               value={values.isAdmin}
               name="isAdmin"
+              label= "check if admin"
+              isInvalid={!!errors.isAdmin}
+              feedback={errors.isAdmin}
             
               onChange={handleChange}
               
               
               id="validationFormik08"
             />
-          </Form.Group>
+          </Form.Group> */}
+
+          <Button type="submit" className='button'  >Sign up</Button>
           </div>
 
         
-          <Button type="submit" className='btn'>Sign up</Button>
         </Form>
-          </Style>
+        
       )}
     </Formik>
+    </Style>
   
   );
 }
