@@ -1,4 +1,5 @@
 import './App.css';
+<<<<<<< HEAD
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import ContactForm from './components/ContactForm'
 import AboutUs from './components/AboutUs'
@@ -17,10 +18,14 @@ import MyOrdersForm from './components/MyOrdersForm'
 import Footer from './components/Footer';
 
 
+=======
+import Admin from './Components/Admin';
+>>>>>>> 97a3426 (new branch)
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Navb />
      
 
@@ -43,6 +48,24 @@ function App() {
        </Routes >
        
 <Footer/>
+=======
+
+      <Admin/>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> 97a3426 (new branch)
     </div>
   );
 }
