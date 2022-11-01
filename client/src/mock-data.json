@@ -1,19 +1,25 @@
 [
   {
     "id": 1,
-    "ordername": "Chairs",
-    "from": "Nairobi",
-    "to": "Machakos",
-    "price": "1000",
-    "status" : "delivered"
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "12"
   },
   {
-    "id": 2,
-    "ordername": "table",
-    "from": "Webuye",
-    "to": "Kisumu",
-    "price": "1500",
-    "status" : "pending"
+    "id": 1,
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "11"
   }
 ]
   

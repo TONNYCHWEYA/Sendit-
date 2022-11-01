@@ -6,57 +6,95 @@ const EditableRow = ({
   handleCancelClick,
 }) => {
   return (
-    <tr>
+    <tr >
       <td>
         <input
-          type="text"
+          type="integer"
           required="required"
-          placeholder="Enter a ordername..."
-          name="ordername"
-          value={editFormData.ordername}
+          placeholder="Enter ID..."
+          name="id"
+          value={editFormData.id}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
         <input
-          type="text"
+          type="string"
+          required="required"
+          placeholder="Enter recipient name..."
+          name="recipient_name"
+          value={editFormData.recipient_name}
+          onChange={handleEditFormChange}
+        ></input>
+      </td><td>
+        <input
+          type="string"
+          required="required"
+          placeholder="Enter recipient contact..."
+          name="recipient_contact"
+          value={editFormData.recipient_contact}
+          onChange={handleEditFormChange}
+        ></input>
+      </td><td>
+        <input
+          type="integer"
+          required="required"
+          placeholder="Enter weight..."
+          name="weight"
+          value={editFormData.weight}
+          onChange={handleEditFormChange}
+        ></input>
+      </td><td>
+        <input
+          type="string"
           required="required"
           placeholder="Enter from..."
-          name="address"
+          name="from"
           value={editFormData.from}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
         <input
-          type="text"
+          type="string"
           required="required"
-          placeholder="Enter to ..."
-          name="to"
-          value={editFormData.to}
+          placeholder="Enter destination..."
+          name="destination"
+          value={editFormData.destination}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
         <input
-          type="number"
+          type="integer"
           required="required"
-          placeholder="Enter price..."
-          name="price"
-          value={editFormData.price}
+          placeholder="Enter total cost..."
+          name="total_cost"
+          value={editFormData.total_cost}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
-      <input
-          type="text"
+        <input
+          type="string"
           required="required"
-          placeholder="Enter the status..."
-          name="status"
-          value={editFormData.status}
+          placeholder="Enter order status ..."
+          name="order_status"
+          value={editFormData.order_status}
           onChange={handleEditFormChange}
         ></input>
       </td>
+      <td>
+        <input
+          type="integer"
+          required="required"
+          placeholder="Enter user id..."
+          name="user_id"
+          value={editFormData.user_id}
+          onChange={handleEditFormChange}
+        ></input>
+      </td>
+      
       <td>
         <button type="submit">Save</button>
         <button type="button" onClick={handleCancelClick}>
@@ -64,7 +102,7 @@ const EditableRow = ({
         </button>
       </td>
     </tr>
-  );
+      );
 };
 
 export default EditableRow;
