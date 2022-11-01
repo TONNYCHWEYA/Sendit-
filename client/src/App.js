@@ -17,14 +17,13 @@ import MyOrdersForm from './components/MyOrdersForm'
 import Footer from './components/Footer';
 
 
-
 function App() {
   return (
     <div className="App">
       <Navb />
-     
-
-      <Routes>
+    
+    
+     <Routes>
           <Route path="/about" element={<AboutUs/>}/>
           
           <Route path="/contactus" element={<ContactForm />}/>
@@ -35,11 +34,13 @@ function App() {
           <Route path="/myaccount" element={<MyAccount />}/>
             
           <Route path="/sendaparcel" element={<Sendaparcel />}/>
+          {/* <Route path="/admin" element={<Admin />} /> */}
 
           <Route path="/myordersform" element={<MyOrdersForm />}/>
           
           <Route exact path="/" element={<Home />}/>
           <Route exact path="/" element={<Footer />}/>
+
        </Routes >
        
 <Footer/>

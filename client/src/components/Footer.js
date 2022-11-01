@@ -3,7 +3,7 @@ import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from "cdbreact";
 
 export const Footer = () => {
   return (
-    <CDBFooter className="shadow" style={{ background: "crimson", color: "white"}}>
+    <CDBFooter className="shadow" style={{ background: "#2E2252", color: "white"}}>
       <CDBBox
         display="flex"
         flex="column"

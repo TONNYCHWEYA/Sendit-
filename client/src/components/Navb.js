@@ -21,6 +21,7 @@ function Navb() {
             <Nav.Link as={Link} to={"/contactus"}>Contact Us</Nav.Link>
             <Nav.Link as={Link} to={"/myaccount"}>My account</Nav.Link>
             <Nav.Link as={Link} to={"/login"}>Login</Nav.Link>
+            <Nav.Link as={Link} to={"/admin"}>Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

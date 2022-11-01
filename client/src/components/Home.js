@@ -22,7 +22,7 @@ function Home() {
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
-          TALK TO US TODAY <i className='far fa-play-circle' />
+          TALK TO US TODAY
         </Button>
       </div>
     </div>
