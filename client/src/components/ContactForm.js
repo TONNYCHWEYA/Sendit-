@@ -1,9 +1,9 @@
-import React from 'react';
+import {React} from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Card,Button } from 'react-bootstrap'
 
-class App extends React.Component {
+class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -82,4 +82,4 @@ class App extends React.Component {
 	  this.setState({message: event.target.value})
   }
 }
-export default App;
+export default ContactForm;
