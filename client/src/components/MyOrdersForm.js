@@ -1,6 +1,6 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import "../App.css";
-import data from "../mock-data.json";
+//import data from "../mock-data.json";
 import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
 import { Button,Table,Card } from "react-bootstrap";
@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 
 const MyOrdersForm = () => {
-  const [orders, setOrders] = useState(data);
+  const [orders, setOrders] = useState([]);
+
 
   const [editFormData, setEditFormData] = useState({
     id: " ",
@@ -22,9 +23,21 @@ const MyOrdersForm = () => {
     user_id: "",
   });
 
-  const [editOrderId, setEditOrderId] = useState(null);
+  useEffect(() => {
+    fetch('http://localhost:3000/parcels')
+       .then((response) => response.json())
+       .then((orders) => {
+          
+          setOrders(orders);
+          console.log(orders);
+       })
+       .catch((err) => {
+          console.log(err.message);
+       });
+    }, []);
 
-  
+    const [editOrderId, setEditOrderId] = useState(null);
+
 
   const handleEditFormChange = (event) => {
     event.preventDefault();

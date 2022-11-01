@@ -1,30 +1,31 @@
-import React from "react";
+import {React, Fragment} from "react";
 
-const ReadOnlyRow = ({ order, handleEditClick, handleDeleteClick }) => {
+const ReadOnlyRow = ({  handleEditClick, handleDeleteClick, order }) => {
   return (
-    <tr>
-      <td>{order.id}</td>
-      <td>{order.recipient_name}</td>
-      <td>{order.recipient_contact}</td>
-      <td>{order.weight}</td>
-      <td>{order.from}</td>
-      <td>{order.destination}</td>
-      <td>{order.total_cost}</td>
-      <td>{order.order_status}</td>
-      <td>{order.user_id}</td>
-
-      <td>
-        <button
-          type="button"
-          onClick={(event) => handleEditClick(event, order)}
-        >
-          Edit
-        </button>
-        <button type="button" onClick={() => handleDeleteClick(order.id)}>
-          Delete
-        </button>
-      </td>
-    </tr>
+    <Fragment>
+      <tr key={order.id}>
+        <td>{order.id}</td>
+        <td>{order.recipient_name}</td>
+        <td>{order.recipient_contact}</td>
+        <td>{order.weight}</td>
+        <td>{order.from}</td>
+        <td>{order.destination}</td>
+        <td>{order.total_cost}</td>
+        <td>{order.order_status}</td>
+        <td>{order.user_id}</td>
+        <td>
+          <button
+            type="button"
+            onClick={(event) => handleEditClick(event, order)}
+          >
+            Edit
+          </button>
+          <button type="button" onClick={() => handleDeleteClick(order.id)}>
+            Delete
+          </button>
+        </td>
+      </tr>
+    </Fragment>
   );
 };
 
