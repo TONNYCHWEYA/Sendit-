@@ -1,21 +1,25 @@
 [
   {
-    "order_id": 1,
-    "customername": "Marion Wanyama",
-    "from": "Nairobi",
-    "to": "Machakos",
-    "collectingdate": "27/10/2022",
-    "price": "1000",
-    "status" : "delivered"
+    "id": 1,
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "12"
   },
   {
-    "order_id": 2,
-    "customername": "Karen Nafula",
-    "from": "Webuye",
-    "to": "Kisumu",
-    "collectingdate": "29/10/2022",
-    "price": "1500",
-    "status" : "pending"
+    "id": 1,
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "11"
   }
 ]
   

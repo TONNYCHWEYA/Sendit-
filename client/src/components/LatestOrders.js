@@ -6,11 +6,12 @@ import {Table, Card } from 'react-bootstrap'
 const LatestOrders = () => {
     const [orders, setOrders] = useState([]);
         useEffect(() => {
-        fetch('')
+        fetch('http://localhost:3000/parcels')
            .then((response) => response.json())
-           .then((data) => {
-              console.log(data);
-              setOrders(data);
+           .then((orders) => {
+              
+              setOrders(orders);
+              console.log(orders);
            })
            .catch((err) => {
               console.log(err.message);
@@ -27,32 +28,39 @@ const LatestOrders = () => {
                 </Card.Body>
             </Card>
             <div className='latest-orders'>
-                {orders.map((order) => {
+                 
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>Order ID</th>
-                            <th>Customer Name</th>
+                            <th>ID</th>
+                            <th>Recipient Name </th>
+                            <th>Recipient Contact</th>
+                            <th>Weight</th>
                             <th>From</th>
-                            <th>To</th>
-                            <th>Collecting date</th>
-                            <th>Status</th>
+                            <th>Destination</th>
+                            <th>Total cost</th>
+                            <th>Order status</th>
+                            <th>User ID</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((order)=> (
-                        <tr>
-                            <td>{order.order_id}</td>
-                            <td>{order.customername}</td>
+                        {orders.map((order)=> 
+                            
+                        <tr key={order.id}>
+                            <td>{order.id}</td>
+                            <td>{order.recipient_name}</td>
+                            <td>{order.recipient_contact}</td>
+                            <td>{order.weight}</td>
                             <td>{order.from}</td>
-                            <td>{order.to}</td>
-                            <td>{order.collectingdate}</td>
-                            <td>{order.status}</td>
+                            <td>{order.destination}</td>
+                            <td>{order.total_cost}</td>
+                            <td>{order.order_status}</td>
+                            <td>{order.user_id}</td>
                         </tr>
-                        ))}
+                            
+                            )}
                     </tbody>
                 </Table>
-            })}
             </div>
         </div>
     )

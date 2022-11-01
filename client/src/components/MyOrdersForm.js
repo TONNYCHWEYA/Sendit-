@@ -11,12 +11,15 @@ const MyOrdersForm = () => {
   const [orders, setOrders] = useState(data);
 
   const [editFormData, setEditFormData] = useState({
-    order_id: " ",
-    customername: "",
+    id: " ",
+    recipient_name: "",
+    recipient_contact: "",
+    weight: "",
     from: "",
-    to: "",
-    price: "",
-    status: "",
+    destination: "",
+    total_cost: "",
+    order_status: "",
+    user_id: "",
   });
 
   const [editOrderId, setEditOrderId] = useState(null);
@@ -41,12 +44,15 @@ const MyOrdersForm = () => {
     event.preventDefault();
 
     const editedOrder = {
-      order_id: editOrderId,
-      customername: editFormData.customername,
+      id: editFormData.id,
+      recipient_name: editFormData.recipient_name,
+      recipient_contact: editFormData.recipient_contact,
+      weight: editFormData.weight,
       from: editFormData.from,
-      to: editFormData.to,
-      price: editFormData.price,
-      status: editFormData.status,
+      destination: editFormData.destination,
+      total_cost: editFormData.total_cost,
+      order_status: editFormData.order_status,
+      user_id: editFormData.user_id,
     };
 
     const newOrders = [...orders];
@@ -64,13 +70,15 @@ const MyOrdersForm = () => {
     setEditOrderId(order.id);
 
     const formValues = {
-      order_id: order.order_id,
-      customername: order.customername,
+      id: order.id,
+      recipient_name: order.recipient_name,
+      recipient_contact: order.recipient_contact,
+      weight: order.weight,
       from: order.from,
-      to: order.to,
-      price: order.price,
-      status: order.status,
-
+      destination: order.destination,
+      total_cost: order.total_cost,
+      order_status: order.order_status,
+      user_id: order.user_id
     };
 
     setEditFormData(formValues);
@@ -104,12 +112,15 @@ const MyOrdersForm = () => {
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>Order ID</th>
-              <th>Customer Name</th>
+              <th> ID</th>
+              <th>Recipient Name</th>
+              <th>Recipient Contact</th>
+              <th>Weight</th>
               <th>From</th>
-              <th>To</th>
-              <th>Price</th>
-              <th> Status</th>
+              <th>Destination</th>
+              <th>Total Cost</th>
+              <th>Order Status</th>
+              <th>User ID</th>
               <th>Action</th>
             </tr>
           </thead>
