@@ -5,7 +5,6 @@ import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
 import { Button,Table,Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import axios from 'axios';
 import {updateParcel} from "./client"
 import { deleteParcel } from "./client";
 
