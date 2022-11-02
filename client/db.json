@@ -2,18 +2,23 @@
   "parcels": [
     {
       "id": 1,
-      "status": "on_transit",
+      "status": "processed",
       "location": "Nairobi"
     },
     {
       "id": 2,
-      "status": "delivered",
+      "status": "in-transit",
       "location": "Nakuru"
     },
     {
       "id": 3,
       "status": "delivered",
       "location": "nakuru"
+    },
+    {
+      "id": 4,
+      "status": "delivered",
+      "location": "Eldoret"
     }
   ]
 }

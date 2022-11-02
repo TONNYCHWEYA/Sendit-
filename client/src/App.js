@@ -13,7 +13,7 @@ import MyAccount from './components/MyAccount'
 import MyOrdersForm from './components/MyOrdersForm'
 import Footer from './components/Footer';
 //import AdminPage from './Components/AdminPage';
-import Parcel from './Components/Page'
+import Parcel from './Components/AdminPanel'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
 
       <Routes>
           <Route path="/about" element={<AboutUs/>}/>
-          <Route path="/page" element={<Parcel/>}/>
+          <Route path="/Adminpannel" element={<Parcel/>}/>
           
           <Route path="/contactus" element={<ContactForm />}/>
 
