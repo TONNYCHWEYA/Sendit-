@@ -96,6 +96,7 @@ const MyOrdersForm = () => {
     };
 
     setEditFormData(formValues);
+    
     const updateElement ={
       recipient_name: parcel.recipient_name,
       recipient_contact: parcel.recipient_contact,

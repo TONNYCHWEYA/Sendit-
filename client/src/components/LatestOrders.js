@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react';
 import "../App.css"
 import {Table, Card } from 'react-bootstrap'
 
-//template for making the get request
 const LatestOrders = () => {
     const [orders, setOrders] = useState([]);
         useEffect(() => {
