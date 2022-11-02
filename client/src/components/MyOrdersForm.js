@@ -5,10 +5,12 @@ import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
 import { Button,Table,Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
+import {updateParcel} from "./client"
+import { deleteParcel } from "./client";
 
 const MyOrdersForm = () => {
-  const [orders, setOrders] = useState([]);
+  const [parcels, setParcels] = useState([]);
 
 
   const [editFormData, setEditFormData] = useState({
@@ -26,17 +28,17 @@ const MyOrdersForm = () => {
   useEffect(() => {
     fetch('http://localhost:3000/parcels')
        .then((response) => response.json())
-       .then((orders) => {
+       .then((parcels) => {
           
-          setOrders(orders);
-          console.log(orders);
+          setParcels(parcels);
+          console.log(parcels);
        })
        .catch((err) => {
           console.log(err.message);
        });
     }, []);
 
-    const [editOrderId, setEditOrderId] = useState(null);
+    const [editParcelId, setEditParcelId] = useState(null);
 
 
   const handleEditFormChange = (event) => {
@@ -56,7 +58,7 @@ const MyOrdersForm = () => {
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
 
-    const editedOrder = {
+    const editedParcel = {
       id: editFormData.id,
       recipient_name: editFormData.recipient_name,
       recipient_contact: editFormData.recipient_contact,
@@ -68,47 +70,90 @@ const MyOrdersForm = () => {
       user_id: editFormData.user_id,
     };
 
-    const newOrders = [...orders];
+    const newParcels = [...parcels];
 
-    const index = orders.findIndex((order) => order.id === editOrderId);
+    const index = parcels.findIndex((parcel) => parcel.id === editParcelId);
 
-    newOrders[index] = editedOrder;
+    newParcels[index] = editedParcel;
 
-    setOrders(newOrders);
-    setEditOrderId(null);
+    setParcels(newParcels);
+    setEditParcelId(null);
   };
 
-  const handleEditClick = (event, order) => {
+  const handleEditClick = (event, parcel) => {
     event.preventDefault();
-    setEditOrderId(order.id);
+    setEditParcelId(parcel.id);
 
     const formValues = {
-      id: order.id,
-      recipient_name: order.recipient_name,
-      recipient_contact: order.recipient_contact,
-      weight: order.weight,
-      from: order.from,
-      destination: order.destination,
-      total_cost: order.total_cost,
-      order_status: order.order_status,
-      user_id: order.user_id
+      id: parcel.id,
+      recipient_name: parcel.recipient_name,
+      recipient_contact: parcel.recipient_contact,
+      weight: parcel.weight,
+      from: parcel.from,
+      destination: parcel.destination,
+      total_cost: parcel.total_cost,
+      order_status: parcel.order_status,
+      user_id: parcel.user_id
     };
 
     setEditFormData(formValues);
-  };
+    const updateElement ={
+      recipient_name: parcel.recipient_name,
+      recipient_contact: parcel.recipient_contact,
+      weight: parcel.weight,
+      from: parcel.from,
+      destination: parcel.destination,
+      total_cost: parcel.total_cost,
+      order_status: parcel.order_status,
+      user_id: parcel.user_id
+    }
+    updateParcel(parcel.id,updateElement);
 
+    // useEffect(() => {
+    //   axios.put(`http://localhost:3000/parcels/'${parcel.id}`, parcels)
+    //   .then((parcels)=>{
+    //     console.log(parcels)
+    //   })
+    //   .catch((error)=>{
+    //     console.log(error)
+    //   })
+    // });
+
+
+
+  // {  function UpdateParcel({ onUpdateParcel }) {
+  //     const [parcel, setparcel] = useState("0");
+
+  //     function handleSubmit(e) {
+  //         e.preventDefault();
+  //         fetch(`http://localhost:3000/parcels${parcel.id}`, {
+  //           method: "PUT",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify({
+  //             order_status: order_status
+          
+  //           }),
+  //         })
+  //           .then((r) => r.json())
+  //           .then((updatedParcel) => onUpdateParcel(updatedParcel));
+  //       }
+  //   };
+}
   const handleCancelClick = () => {
-    setEditOrderId(null);
+    setEditParcelId(null);
   };
 
-  const handleDeleteClick = (orderId) => {
-    const newOrders = [...orders];
+  const handleDeleteClick = (parcelId) => {
+    const newParcels = [...parcels];
 
-    const index = orders.findIndex((order) => order.id === orderId);
+    const index = parcels.findIndex((parcel) => parcel.id === parcelId);
 
-    newOrders.splice(index, 1);
+    newParcels.splice(index, 1);
 
-    setOrders(newOrders);
+    setParcels(newParcels);
+    deleteParcel(parcelId)
   };
 
   return (
@@ -138,9 +183,9 @@ const MyOrdersForm = () => {
             </tr>
           </thead>
           <tbody>
-            {orders.map((order) => (
+            {parcels.map((parcel) => (
               <Fragment>
-                {editOrderId === order.id ? (
+                {editParcelId === parcel.id ? (
                   <EditableRow
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
@@ -148,7 +193,7 @@ const MyOrdersForm = () => {
                   />
                 ) : (
                   <ReadOnlyRow
-                    order={order}
+                  parcel={parcel}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
                   />
