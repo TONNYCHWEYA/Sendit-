@@ -3,11 +3,7 @@ import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from "cdbreact";
 
 export const Footer = () => {
   return (
-<<<<<<< HEAD
     <CDBFooter className="shadow" style={{ background: "#2E2252", color: "white"}}>
-=======
-    <CDBFooter className="shadow" style={{ background: '#1A237E', color: "white", margin: '20px'}}>
->>>>>>> 4668bfa4cceee185aa5cc045b5ef74ea2383145c
       <CDBBox
         display="flex"
         flex="column"
@@ -41,9 +37,9 @@ export const Footer = () => {
             </p>
             <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
               <CDBFooterLink href="/">Home</CDBFooterLink>
-              <CDBFooterLink href="/">About Us</CDBFooterLink>
-              <CDBFooterLink href="/">Contact</CDBFooterLink>
-              <CDBFooterLink href="/">Send a parcels</CDBFooterLink>
+              <CDBFooterLink href="/about">About Us</CDBFooterLink>
+              <CDBFooterLink href="/contactus">Contact Us</CDBFooterLink>
+              <CDBFooterLink href="/sendaparcel">Send a parcels</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -51,9 +47,9 @@ export const Footer = () => {
               Help
             </p>
             <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
-              <CDBFooterLink href="/">Support</CDBFooterLink>
-              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
-              <CDBFooterLink href="/">Sign In</CDBFooterLink>
+              <CDBFooterLink href="/contactus">Support</CDBFooterLink>
+              <CDBFooterLink href="/login">Sign Up</CDBFooterLink>
+              <CDBFooterLink href="/login">Sign In</CDBFooterLink>
             </CDBBox>
           </CDBBox>
           <CDBBox>
@@ -61,9 +57,9 @@ export const Footer = () => {
               My Account
             </p>
             <CDBBox flex="column" style={{ cursor: "pointer", padding: "0" }}>
-              <CDBFooterLink href="/">My orders</CDBFooterLink>
-              <CDBFooterLink href="/">address Book</CDBFooterLink>
-              <CDBFooterLink href="/">Profile setting</CDBFooterLink>
+              <CDBFooterLink href="/myaccount">My orders</CDBFooterLink>
+              <CDBFooterLink href="/myaccount">address Book</CDBFooterLink>
+              <CDBFooterLink href="/myaccount">Profile setting</CDBFooterLink>
             </CDBBox>
           </CDBBox>
         </CDBBox>
