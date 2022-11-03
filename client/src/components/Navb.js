@@ -9,17 +9,17 @@ import {
 
 function Navb() {
   return (
-    <Navbar bg="light" expand="lg" style={{color: "red"}}>
-      <Container>
+    <Navbar  expand="lg" style={{ background: "#1A237E"}} >
+      <Container fluid>
         <Navbar.Brand href="#home">SENDIT</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
             <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
             <Nav.Link as={Link} to={"/sendaparcel"}>Send a parcel</Nav.Link>
             <Nav.Link as={Link} to={"/about"}>About Us</Nav.Link>
             <Nav.Link as={Link} to={"/contactus"}>Contact Us</Nav.Link>
-            <Nav.Link as={Link} to={"/myaccount"}>My account</Nav.Link>
+            <Nav.Link as={Link} to={"/myaccount"} className='d-flex'>My account</Nav.Link>
             <Nav.Link as={Link} to={"/login"}>Login</Nav.Link>
             <Nav.Link as={Link} to={"/admin"}>Admin</Nav.Link>
           </Nav>

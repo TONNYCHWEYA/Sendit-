@@ -25,7 +25,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Row from 'react-bootstrap/Row';
+import Row from "react-bootstrap/Row"
 import { Formik } from "formik"
 import * as yup from 'yup';
 import React from 'react';
@@ -54,8 +54,8 @@ function Signup() {
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        firstName: 'Mark',
-        lastName: 'Otto',
+        firstName: '',
+        lastName: '',
         username: '',
         password: '',
         email: '',
@@ -74,9 +74,11 @@ function Signup() {
         errors,
       }) => (
         <Form noValidate onSubmit={handleSubmit} >
-          <Row className="mb-3 mt-3">
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>First name</Form.Label>
+         
+            <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
+
+              <Form.Label column sm="2">First name</Form.Label>
+              <Col sm="10">
               <Form.Control
                 type="text"
                 name="firstName"
@@ -84,10 +86,14 @@ function Signup() {
                 onChange={handleChange}
                 isValid={touched.firstName && !errors.firstName}
               />
+              </Col>
+             
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormik02">
-              <Form.Label>Last name</Form.Label>
+
+            <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik02">
+              <Form.Label column sm="2">Last name</Form.Label>
+              <Col sm="10">
               <Form.Control
                 type="text"
                 name="lastName"
@@ -95,13 +101,18 @@ function Signup() {
                 onChange={handleChange}
                 isValid={touched.lastName && !errors.lastName}
               />
+              </Col>
+             
 
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
-            <Form.Group as={Col} md="2" controlId="validationFormikUsername">
-              <Form.Label>Username</Form.Label>
-              <InputGroup hasValidation>
-                
+
+
+            <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormikUsername">
+             
+              <Form.Label column sm="2">Username</Form.Label>
+             
+              <Col sm="10">
                 <Form.Control
                   type="text"
                   placeholder="Username"
@@ -111,39 +122,42 @@ function Signup() {
                   onChange={handleChange}
                   isInvalid={!!errors.username}
                 />
+                </Col>
                 <Form.Control.Feedback type="invalid">
                   {errors.username}
                 </Form.Control.Feedback>
-              </InputGroup>
+             
             </Form.Group>
-          </Row>
-          <Row className="mb-3">
-          <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
+         
+          <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
+              <Form.Label column sm="2">Email</Form.Label>
+              <Col sm="10">  <Form.Control
                 type="email"
                 name="email"
                 value={values.email}
                 onChange={handleChange}
                 isValid={touched.email && !errors.email}
-              />
+              /></Col>
+            
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>password</Form.Label>
-              <Form.Control
+            <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
+              <Form.Label column sm="2">password</Form.Label>
+              <Col sm="10"><Form.Control
                 type="password"
                 name="password"
                 value={values.password}
                 onChange={handleChange}
                 isValid={touched.password && !errors.password}
-              />
+              /></Col>
+              
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>phone number</Form.Label>
+            <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
+              <Form.Label column sm="2">phone number</Form.Label>
+              <Col sm="10">
               <Form.Control
                 type="phonenumber"
                 name="phonenumber"
@@ -151,12 +165,13 @@ function Signup() {
                 onChange={handleChange}
                 isValid={touched.phonenumber && !errors.phonenumber}
               />
+              </Col>
+             
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
            
           
-          </Row>
-          <Form.Group className="mb-3">
+          <Form.Group as={Row} className="mb-3 mt-3">
             <Form.Check
               required
               name="terms"
