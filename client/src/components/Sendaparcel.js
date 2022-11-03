@@ -81,15 +81,9 @@ function Sendaparcel() {
         errors,
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
-<<<<<<< HEAD
-          
-            <Form.Group  controlId="validationFormik01">
-              <Form.Label>Name</Form.Label>
-=======
           <Row className="mb-3">
             <Form.Group as={Col} md="4" controlId="validationFormik01">
               <Form.Label>Receiptient Name</Form.Label>
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
               <Form.Control
                 type="text"
                 name="RecipientName"
@@ -143,4 +137,4 @@ function Sendaparcel() {
   );
 }
 
-export default Sendaparcel
+export default Sendaparcel;

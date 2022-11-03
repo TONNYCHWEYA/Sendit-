@@ -25,10 +25,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-<<<<<<< HEAD
 import Row from "react-bootstrap/Row"
-=======
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
 import { Formik } from "formik"
 import * as yup from 'yup';
 import React from 'react'
@@ -113,13 +110,8 @@ const navigate = useNavigate();
       validationSchema={schema}
       
       initialValues={{
-<<<<<<< HEAD
         firstName: '',
         lastName: '',
-=======
-        first_name: '',
-        last_name: '',
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
         username: '',
         password: '',
         email_address: '',
@@ -169,7 +161,6 @@ const navigate = useNavigate();
         touched,
         isValid,
         errors,
-<<<<<<< HEAD
       }) => (
         <Form noValidate onSubmit={handleSubmit} >
          
@@ -177,19 +168,6 @@ const navigate = useNavigate();
 
               <Form.Label column sm="2">First name</Form.Label>
               <Col sm="10">
-=======
-      
-        submitForm
-      } ) => (
-       
-          
-        <Form noValidate onSubmit={handleSubmit}  className='form'>
-          <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-          <div className='div'>
-            <Form.Group as={Col} md="4" controlId="validationFormik01">
-              <Form.Label>First name</Form.Label>
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
               <Form.Control
                 type="text"
                 name="first_name"
@@ -198,13 +176,9 @@ const navigate = useNavigate();
                 isValid={touched.first_name && !errors.first_name}
                 isInvalid={!!errors.first_name}
               />
-<<<<<<< HEAD
               </Col>
              
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-=======
-              <Form.Control.Feedback>{errors.first_name}</Form.Control.Feedback>
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
             </Form.Group>
 
             <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik02">
@@ -221,7 +195,6 @@ const navigate = useNavigate();
               </Col>
              
 
-<<<<<<< HEAD
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
@@ -231,14 +204,6 @@ const navigate = useNavigate();
               <Form.Label column sm="2">Username</Form.Label>
              
               <Col sm="10">
-=======
-              <Form.Control.Feedback type="invalid">{errors.last_name}</Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} md="4" controlId="validationFormikUsername">
-              <Form.Label>Username</Form.Label>
-              <InputGroup hasValidation>
-                
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
                 <Form.Control
                   type="text"
                  
@@ -255,23 +220,14 @@ const navigate = useNavigate();
                 </Form.Control.Feedback>
              
             </Form.Group>
-<<<<<<< HEAD
          
           <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
               <Form.Label column sm="2">Email</Form.Label>
               <Col sm="10">  <Form.Control
-=======
-          
-          
-          <Form.Group as={Col} md="4" controlId="validationFormik03">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
                 type="email"
                 name="email_address"
                 value={values.email_address}
                 onChange={handleChange}
-<<<<<<< HEAD
                 isValid={touched.email && !errors.email}
               /></Col>
             
@@ -281,26 +237,11 @@ const navigate = useNavigate();
             <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
               <Form.Label column sm="2">password</Form.Label>
               <Col sm="10"><Form.Control
-=======
-                isValid={touched.email_address && !errors.email_address}
-                isInvalid={!!errors.email_address}
-              />
-               <Form.Control.Feedback type="invalid">
-                  {errors.email_address}
-                </Form.Control.Feedback>
-             
-            </Form.Group>
-
-            <Form.Group as={Col} md="4" controlId="validationFormik04">
-              <Form.Label>password</Form.Label>
-              <Form.Control
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
                 type="password"
                 name="password"
                 value={values.password}
                 onChange={handleChange}
                 isValid={touched.password && !errors.password}
-<<<<<<< HEAD
               /></Col>
               
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -309,18 +250,6 @@ const navigate = useNavigate();
             <Form.Group as={Row} className="mb-3 mt-3" controlId="validationFormik01">
               <Form.Label column sm="2">phone number</Form.Label>
               <Col sm="10">
-=======
-                isInvalid={!!errors.password}
-              />
-               <Form.Control.Feedback type="invalid">
-                  {errors.password}
-                </Form.Control.Feedback>
-            
-            </Form.Group>
-
-            <Form.Group as={Col} md="4" controlId="validationFormik05">
-              <Form.Label>phone number</Form.Label>
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
               <Form.Control
                 type="tel"
                 name="phone_number"
@@ -329,7 +258,6 @@ const navigate = useNavigate();
                 isValid={touched.phone_number && !errors.phone_number}
                 isInvalid={!!errors.phone_number}
               />
-<<<<<<< HEAD
               </Col>
              
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -337,14 +265,6 @@ const navigate = useNavigate();
            
           
           <Form.Group as={Row} className="mb-3 mt-3">
-=======
-              <Form.Control.Feedback>{errors.phone_number}</Form.Control.Feedback>
-            </Form.Group>
-           
-          
-          
-          {/* <Form.Group className="mb-3">
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
             <Form.Check
               value={values.isAdmin}
               name="isAdmin"

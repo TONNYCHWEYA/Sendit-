@@ -17,14 +17,9 @@ import {
 
 function Navb() {
   return (
-<<<<<<< HEAD
-    <Navbar  expand="lg" style={{ background: "#1A237E"}} >
-      <Container fluid>
-=======
     <Style>
     <Navbar expand="lg" className='nav' style={{background: '#1A237E', color: 'white'}}>
       <Container>
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
         <Navbar.Brand href="#home">SENDIT</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >

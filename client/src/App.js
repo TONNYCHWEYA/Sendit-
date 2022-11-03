@@ -12,12 +12,8 @@ import React from 'react';
 import MyAccount from './components/MyAccount'
 import MyOrdersForm from './components/MyOrdersForm'
 import Footer from './components/Footer';
-<<<<<<< HEAD
-
-=======
 //import AdminPage from './Components/AdminPage';
 import Parcel from './Components/AdminPanel'
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
 
 function App() {
   return (
@@ -37,11 +33,6 @@ function App() {
           <Route path="/myaccount" element={<MyAccount />}/>
             
           <Route path="/sendaparcel" element={<Sendaparcel />}/>
-<<<<<<< HEAD
-          {/* <Route path="/admin" element={<Admin />} /> */}
-
-=======
->>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
           <Route path="/myordersform" element={<MyOrdersForm />}/>
           
           <Route exact path="/" element={<Home />}/>
