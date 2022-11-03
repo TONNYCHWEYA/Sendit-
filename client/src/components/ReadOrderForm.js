@@ -1,5 +1,4 @@
 import {React, Fragment} from "react";
-import updateParcel from './MyOrdersForm'
 
 const ReadOnlyRow = ({  handleEditClick, handleDeleteClick, parcel, updateParcel }) => {
   return (
