@@ -78,7 +78,7 @@ const MyOrdersForm = () => {
     setParcels(newParcels);
     setEditParcelId(null);
   };
-
+var updateElement;
   const handleEditClick = (event, parcel) => {
     event.preventDefault();
     setEditParcelId(parcel.id);
@@ -97,7 +97,7 @@ const MyOrdersForm = () => {
 
     setEditFormData(formValues);
     
-    const updateElement ={
+     updateElement ={
       recipient_name: parcel.recipient_name,
       recipient_contact: parcel.recipient_contact,
       weight: parcel.weight,
@@ -108,7 +108,12 @@ const MyOrdersForm = () => {
       user_id: parcel.user_id
     }
    
-    update(parcel.id,updateElement);
+  }
+
+  const handleSave = ()=> {
+
+    update(editFormData.id,updateElement);
+
   }
 
 
@@ -162,6 +167,7 @@ const MyOrdersForm = () => {
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
+                    handleSave={handleSave}
                   />
                 ) : (
                   <ReadOnlyRow
