@@ -5,7 +5,7 @@ import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
 import { Button,Table,Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {updateParcel} from "./client"
+import {update} from "./client"
 import { deleteParcel } from "./client";
 
 const MyOrdersForm = () => {
@@ -103,44 +103,16 @@ const MyOrdersForm = () => {
       weight: parcel.weight,
       from: parcel.from,
       destination: parcel.destination,
-      total_cost: parcel.total_cost,
+      distance: null,
       order_status: parcel.order_status,
       user_id: parcel.user_id
     }
-    updateParcel(parcel.id,updateElement);
-
-    // useEffect(() => {
-    //   axios.put(`http://localhost:3000/parcels/'${parcel.id}`, parcels)
-    //   .then((parcels)=>{
-    //     console.log(parcels)
-    //   })
-    //   .catch((error)=>{
-    //     console.log(error)
-    //   })
-    // });
+   
+    update(parcel.id,updateElement);
+  }
 
 
-
-  // {  function UpdateParcel({ onUpdateParcel }) {
-  //     const [parcel, setparcel] = useState("0");
-
-  //     function handleSubmit(e) {
-  //         e.preventDefault();
-  //         fetch(`http://localhost:3000/parcels${parcel.id}`, {
-  //           method: "PUT",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify({
-  //             order_status: order_status
-          
-  //           }),
-  //         })
-  //           .then((r) => r.json())
-  //           .then((updatedParcel) => onUpdateParcel(updatedParcel));
-  //       }
-  //   };
-}
+   
   const handleCancelClick = () => {
     setEditParcelId(null);
   };

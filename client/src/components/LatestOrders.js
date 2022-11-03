@@ -2,15 +2,15 @@ import {useState, useEffect} from 'react';
 import "../App.css"
 import {Table, Card } from 'react-bootstrap'
 
-const LatestOrders = () => {
-    const [orders, setOrders] = useState([]);
+const LatestParcels = () => {
+    const [parcels, setParcels] = useState([]);
         useEffect(() => {
         fetch('http://localhost:3000/parcels')
            .then((response) => response.json())
-           .then((orders) => {
+           .then((parcels) => {
               
-              setOrders(orders);
-              console.log(orders);
+              setParcels(parcels);
+              console.log(parcels);
            })
            .catch((err) => {
               console.log(err.message);
@@ -43,18 +43,18 @@ const LatestOrders = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {orders.map((order)=> 
+                        {parcels.map((parcel)=> 
                             
-                        <tr key={order.id}>
-                            <td>{order.id}</td>
-                            <td>{order.recipient_name}</td>
-                            <td>{order.recipient_contact}</td>
-                            <td>{order.weight}</td>
-                            <td>{order.from}</td>
-                            <td>{order.destination}</td>
-                            <td>{order.total_cost}</td>
-                            <td>{order.order_status}</td>
-                            <td>{order.user_id}</td>
+                        <tr key={parcel.id}>
+                            <td>{parcel.id}</td>
+                            <td>{parcel.recipient_name}</td>
+                            <td>{parcel.recipient_contact}</td>
+                            <td>{parcel.weight}</td>
+                            <td>{parcel.from}</td>
+                            <td>{parcel.destination}</td>
+                            <td>{parcel.total_cost}</td>
+                            <td>{parcel.order_status}</td>
+                            <td>{parcel.user_id}</td>
                         </tr>
                             
                             )}
@@ -65,4 +65,4 @@ const LatestOrders = () => {
     )
 }
 
-export default LatestOrders;
+export default LatestParcels;
