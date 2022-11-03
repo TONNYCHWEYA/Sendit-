@@ -1,5 +1,6 @@
-[
+ [
   {
+<<<<<<< HEAD
     "id": 1,
     "recipient_name": "Marion Wanyama",
     "recipient_contact": "0745",
@@ -21,5 +22,27 @@
     "order_status" : "delivered",
     "user_id" : "11"
   }
+=======
+      "id":1,
+      "status":"on_transit",
+      "location":"Nairobi" 
+  },
+
+  {
+      "id":2,
+      "status":"delivered",
+      "location":"Nakuru"
+  },
+  {
+      "id":3,
+      "status":"delivered",
+      "location":"nakuru"
+  },
+  {
+    "id":4,
+    "status":"in-transit",
+    "location":"Eldoret"
+}
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
 ]
   

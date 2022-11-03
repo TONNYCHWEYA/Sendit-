@@ -94,7 +94,10 @@ GEM
     io-console (0.5.11)
     irb (1.4.2)
       reline (>= 0.3.0)
+<<<<<<< HEAD
     jsonapi-renderer (0.2.2)
+=======
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
     jwt (2.5.0)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -169,7 +172,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+<<<<<<< HEAD
   active_model_serializers
+=======
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
   bcrypt
   debug
   factory_bot_rails

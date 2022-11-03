@@ -23,26 +23,50 @@ import { Formik } from "formik"
 import * as yup from 'yup';
 import Map from './Map'
 import { Container } from 'react-bootstrap'
+import { React, useState} from 'react'
 
+import styled from "styled-components"
 
+const Style = styled.div`
+ margin: 40px;
+
+ .button{
+  margin-top: 40px;
+ }
+`;
 
 const schema = yup.object().shape({
-  RecipientName: yup.string().required(),
-  Recipient_contact: yup.string().required(),
-  weigth_in_kg: yup.string().required(),
+  RecipientName: yup.string().required("Required"),
+  Recipient_contact: yup.string().required("Required"),
+  weigth_in_kg: yup.number().required("Required"),
   
 
 });
 
 function Sendaparcel() {
+
+  const [distance, setDistance] = useState('')
+  const [duration, setDuration] = useState('')
+
+  console.log(distance)
+
+  function onSubmit(values,actions){
+    console.log(values)
+    console.log(actions)
+    const newValues = {...values, distance: distance, duration: duration}
+    console.log(newValues)
+  }
   return (
+    <Style>
+   
     <Formik
       validationSchema={schema}
-      onSubmit={console.log}
+      onSubmit={onSubmit}
       initialValues={{
-        RecipientName: 'Mark',
+        RecipientName: '',
         Recipient_contact: '',
         weigth_in_kg: '',
+     
        
         
       }}
@@ -57,12 +81,18 @@ function Sendaparcel() {
         errors,
       }) => (
         <Form noValidate onSubmit={handleSubmit}>
+<<<<<<< HEAD
           
             <Form.Group  controlId="validationFormik01">
               <Form.Label>Name</Form.Label>
+=======
+          <Row className="mb-3">
+            <Form.Group as={Col} md="4" controlId="validationFormik01">
+              <Form.Label>Receiptient Name</Form.Label>
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
               <Form.Control
                 type="text"
-                name="Recipient_Name"
+                name="RecipientName"
                 value={values.RecipientName}
                 onChange={handleChange}
                 isValid={touched.RecipientName && !errors.RecipientName}
@@ -101,13 +131,15 @@ function Sendaparcel() {
           
 
           <Container>
-            <Map />
+            <Map distance={distance} setDistance={setDistance} duration={duration} setDuration={setDuration}/>
           </Container>
          
-          <Button type="submit">Send a parcel</Button>
+          <Button type="submit" className='button'>Send a parcel</Button>
         </Form>
       )}
     </Formik>
+    
+    </Style>
   );
 }
 
