@@ -1,0 +1,32 @@
+0000000000000000000000000000000000000000 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666183973 +0300	commit (initial): Starter code
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666287324 +0300	checkout: moving from main to client-dev
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666287359 +0300	checkout: moving from client-dev to Tonny
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666530590 +0300	checkout: moving from Tonny to Tonny
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666531294 +0300	checkout: moving from Tonny to new
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 0db28cfef4c17c3d87f31f7e64f5a18addeca05f TONNYCHWEYA <chweyatonny@gmail.com> 1666531408 +0300	commit: delete branch
+0db28cfef4c17c3d87f31f7e64f5a18addeca05f 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666531679 +0300	checkout: moving from new to main
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 533b965eb2cd93b95c28e1413edd5ca9a92b49fe TONNYCHWEYA <chweyatonny@gmail.com> 1666531804 +0300	checkout: moving from main to Tonny
+533b965eb2cd93b95c28e1413edd5ca9a92b49fe 8a487f8c51b7b608f6accd794ef84f863691cb10 TONNYCHWEYA <chweyatonny@gmail.com> 1666578187 +0300	commit: Login created
+8a487f8c51b7b608f6accd794ef84f863691cb10 8a42a11aac004b78c56f8240b804f76545bd59c9 TONNYCHWEYA <chweyatonny@gmail.com> 1666579858 +0300	commit: Navbar created
+8a42a11aac004b78c56f8240b804f76545bd59c9 0bf742738dcc212fa1a8480d9a73869e018a19aa TONNYCHWEYA <chweyatonny@gmail.com> 1666585519 +0300	commit: Signup created
+0bf742738dcc212fa1a8480d9a73869e018a19aa 9c0076cc334d866c5c458b52d24547558ea93e76 TONNYCHWEYA <chweyatonny@gmail.com> 1666586254 +0300	commit: Added React router dom
+9c0076cc334d866c5c458b52d24547558ea93e76 dc03ebf1f0fb40cc113d617052ca715a697a5c8f TONNYCHWEYA <chweyatonny@gmail.com> 1666590918 +0300	commit (merge): routes added
+dc03ebf1f0fb40cc113d617052ca715a697a5c8f 6be620dbf77f5c5456c8f9b344464bee8de677be TONNYCHWEYA <chweyatonny@gmail.com> 1666783148 +0300	commit: Created map component
+6be620dbf77f5c5456c8f9b344464bee8de677be 7b6fbf49eb65b52de6eb95a389557310c40df60f TONNYCHWEYA <chweyatonny@gmail.com> 1666784114 +0300	commit (merge): Package update
+7b6fbf49eb65b52de6eb95a389557310c40df60f 18579c7e07f19c9fb085951f345a7ae93762df59 TONNYCHWEYA <chweyatonny@gmail.com> 1666788272 +0300	commit (merge): Linked my orders with send a parcel
+18579c7e07f19c9fb085951f345a7ae93762df59 f932d785cf50d4f8563937e5ae22786e8741178d TONNYCHWEYA <chweyatonny@gmail.com> 1666854465 +0300	commit (merge): sign up style changed
+f932d785cf50d4f8563937e5ae22786e8741178d 65fbcf7ebbe24879fbf0f462cb7b92ff83841b06 TONNYCHWEYA <chweyatonny@gmail.com> 1666869262 +0300	commit (merge): update changes
+65fbcf7ebbe24879fbf0f462cb7b92ff83841b06 92aaaf700683dae206d8197e1db113863ad10d9b TONNYCHWEYA <chweyatonny@gmail.com> 1666869613 +0300	commit (merge): update changes
+92aaaf700683dae206d8197e1db113863ad10d9b 58dcd991a6be3043d6bdaa2ad2b7ad4eaf178b70 TONNYCHWEYA <chweyatonny@gmail.com> 1666879661 +0300	commit: mm
+58dcd991a6be3043d6bdaa2ad2b7ad4eaf178b70 8815ec25b02046d38e753d5b07bdd7f55f7eb200 TONNYCHWEYA <chweyatonny@gmail.com> 1666879686 +0300	checkout: moving from Tonny to Marion-Wanyama
+8815ec25b02046d38e753d5b07bdd7f55f7eb200 8815ec25b02046d38e753d5b07bdd7f55f7eb200 TONNYCHWEYA <chweyatonny@gmail.com> 1666880145 +0300	checkout: moving from Marion-Wanyama to Tioni-Chweya
+8815ec25b02046d38e753d5b07bdd7f55f7eb200 00e9ea4316b3841fbfb36dbbc124aa6212293183 TONNYCHWEYA <chweyatonny@gmail.com> 1666880296 +0300	pull origin Marion-Wanyama: Fast-forward
+00e9ea4316b3841fbfb36dbbc124aa6212293183 f5b7eac0cfc648fbdda2fb33d01e40eebe20fac5 TONNYCHWEYA <chweyatonny@gmail.com> 1666905630 +0300	commit: Added styling
+f5b7eac0cfc648fbdda2fb33d01e40eebe20fac5 c0912ff247eac5b07530e6a34300aecdf392f517 TONNYCHWEYA <chweyatonny@gmail.com> 1667172290 +0300	commit (merge): map added
+c0912ff247eac5b07530e6a34300aecdf392f517 80f5267279a3b7384301ba2ef68a8ea6cb65c255 TONNYCHWEYA <chweyatonny@gmail.com> 1667280060 +0300	commit: login validation added
+80f5267279a3b7384301ba2ef68a8ea6cb65c255 80f5267279a3b7384301ba2ef68a8ea6cb65c255 TONNYCHWEYA <chweyatonny@gmail.com> 1667452040 +0300	checkout: moving from Tioni-Chweya to merge
+80f5267279a3b7384301ba2ef68a8ea6cb65c255 5e7aca53794da20cbb7d073ed8aa441a36907d7e TONNYCHWEYA <chweyatonny@gmail.com> 1667453136 +0300	commit: package update
+5e7aca53794da20cbb7d073ed8aa441a36907d7e f4ad19c9417cb3b7ba324c9e8764c8fb0a00fea8 TONNYCHWEYA <chweyatonny@gmail.com> 1667453164 +0300	pull origin Marion-Wanyama: Merge made by the 'recursive' strategy.
+f4ad19c9417cb3b7ba324c9e8764c8fb0a00fea8 c054f8911c74d1205f2b52f301f4646b7d83db17 TONNYCHWEYA <chweyatonny@gmail.com> 1667453540 +0300	commit: admin panel
+c054f8911c74d1205f2b52f301f4646b7d83db17 e88b3b7ff1ebd50a3823dded90f2e8586612ce1b TONNYCHWEYA <chweyatonny@gmail.com> 1667457078 +0300	commit: package update
+e88b3b7ff1ebd50a3823dded90f2e8586612ce1b 6e923fc486ed9a9f1a6f8bd830593894797c250b TONNYCHWEYA <chweyatonny@gmail.com> 1667475487 +0300	commit: package update

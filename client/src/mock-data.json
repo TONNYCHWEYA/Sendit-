@@ -1,0 +1,61 @@
+ [
+  {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "id": 1,
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "12"
+=======
+      "id":1,
+      "status":"on_transit",
+      "location":"Nairobi" 
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
+  },
+
+  {
+<<<<<<< HEAD
+    "id": 1,
+    "recipient_name": "Marion Wanyama",
+    "recipient_contact": "0745",
+    "weight": "233",
+    "from": "Machakos",
+    "destination": "kisumu",
+    "total_cost" : "234",
+    "order_status" : "delivered",
+    "user_id" : "11"
+  }
+=======
+=======
+      "id":1,
+      "status":"on_transit",
+      "location":"Nairobi" 
+  },
+
+  {
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
+      "id":2,
+      "status":"delivered",
+      "location":"Nakuru"
+  },
+  {
+      "id":3,
+      "status":"delivered",
+      "location":"nakuru"
+  },
+  {
+    "id":4,
+    "status":"in-transit",
+    "location":"Eldoret"
+}
+<<<<<<< HEAD
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
+=======
+>>>>>>> d06434cbb024e6cec0ac7a60250ab212b8fb0415
+]
+  
