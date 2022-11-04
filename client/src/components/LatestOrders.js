@@ -60,7 +60,7 @@ const LatestOrders = ({setUser}) => {
                             <th>Recipient Name </th>
                             <th>Recipient Contact</th>
                             <th>Weight</th>
-                            <th>From</th>
+                            <th>From</th>th
                             <th>Destination</th>
                             <th>Total cost</th>
                             <th>Order status</th>
