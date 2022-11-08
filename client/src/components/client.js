@@ -1,4 +1,5 @@
 
+
 import axios from "axios";
 import fetch from "unfetch";
 
@@ -17,7 +18,7 @@ export const updateParcel = (id, parcel) =>
         order_status: parcel.order_status,
         user_id: parcel.user_id,
       },
-    })
+    }})
     .then((response) => {
       console.log(response.data);
     })
