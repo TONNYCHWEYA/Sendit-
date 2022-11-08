@@ -109,50 +109,17 @@ const MyOrdersForm = ({validator}) => {
 
     setEditFormData(formValues);
     
-    const updateElement ={
-      recipient_name: parcel.recipient_name,
-      recipient_contact: parcel.recipient_contact,
-      weight: parcel.weight,
-      from: parcel.from,
-      destination: parcel.destination,
-      total_cost: parcel.total_cost,
-      order_status: parcel.order_status,
-      user_id: parcel.user_id
-    }
-    updateParcel(parcel.id,updateElement);
-
-    // useEffect(() => {
-    //   axios.put(`http://localhost:3000/parcels/'${parcel.id}`, parcels)
-    //   .then((parcels)=>{
-    //     console.log(parcels)
-    //   })
-    //   .catch((error)=>{
-    //     console.log(error)
-    //   })
-    // });
-
-
-
-  // {  function UpdateParcel({ onUpdateParcel }) {
-  //     const [parcel, setparcel] = useState("0");
-
-  //     function handleSubmit(e) {
-  //         e.preventDefault();
-  //         fetch(`http://localhost:3000/parcels${parcel.id}`, {
-  //           method: "PUT",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify({
-  //             order_status: order_status
-          
-  //           }),
-  //         })
-  //           .then((r) => r.json())
-  //           .then((updatedParcel) => onUpdateParcel(updatedParcel));
-  //       }
-  //   };
+ 
+ 
 }
+
+const handleSave = ()=> {
+
+  update(editFormData.id,editFormData);
+
+}
+
+
   const handleCancelClick = () => {
     setEditParcelId(null);
   };
@@ -202,6 +169,7 @@ const MyOrdersForm = ({validator}) => {
                     editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange}
                     handleCancelClick={handleCancelClick}
+                    handleSave={handleSave}
                   />
                 ) : (
                   <ReadOnlyRow
