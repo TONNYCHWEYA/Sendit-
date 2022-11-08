@@ -5,7 +5,7 @@ import EditableRow from "./EditOrderForm";
 import ReadOnlyRow from "./ReadOrderForm";
 import { Button,Table,Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {updateParcel} from "./client"
+import {update} from "./client"
 import { deleteParcel } from "./client";
 import { ValidationError } from "yup";
 
